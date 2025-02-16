@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СУ "Йордан Йовков" - Приложен програмист</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bal.css">
+
+
+
+
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="СУ Йордан Йовков">
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Начало</a></li>
+                <li><a href="#a">За паралелката</a></li>
+                <li>
+                    <a href="#program">Обучение</a>
+                    <ul>
+                        <li><a href="#curriculum">Учебна програма</a></li>
+                        <li><a href="#extracurricular">Извънкласни дейности</a></li>
+                    </ul>
+                </li>
+                <li><a href="#projects">Проекти</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+
+        <section id="calculator" class="calculator-section">
+            <div class="calculator-container">
+                <h2>🎓 Калкулатор за бал 🎓</h2>
+                <form id="balForm">
+                    <div class="input-group">
+                        <label>🖋️ Точки от НВО по БЕЛ:</label>
+                        <input type="number" id="belPoints" min="0" max="100" required>
+                    </div>
+                    <div class="input-group">
+                        <label>📐Точки от НВО по Математика:</label>
+                        <input type="number" id="mathPoints" min="0" max="100" required>
+                    </div>
+                    <div class="input-group">
+                        <label>💻 Оценка по Информационни технологии:</label>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select-trigger">Изберете оценка</div>
+                                <div class="custom-options">
+                                    <span class="custom-option" data-value="15">Среден (3)</span>
+                                    <span class="custom-option" data-value="26">Добър (4)</span>
+                                    <span class="custom-option" data-value="39">Много добър (5)</span>
+                                    <span class="custom-option" data-value="50">Отличен (6)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>🌍 Оценка по Чужд език (Английския език <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="Великобритания" style="width: 20px; vertical-align: middle; margin-right: 5px;">):
+
+                        </label>
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select-trigger">Изберете оценка</div>
+                                <div class="custom-options">
+                                    <span class="custom-option" data-value="15">Среден (3)</span>
+                                    <span class="custom-option" data-value="26">Добър (4)</span>
+                                    <span class="custom-option" data-value="39">Много добър (5)</span>
+                                    <span class="custom-option" data-value="50">Отличен (6)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="calculateBal" class="calculate-btn">✨ Изчисли бал ✨</button>
+                </form>
+                <div id="result" class="result-box">Твоят бал е:</div>
+            </div>
+        </section>
+
+    
+        <div class="calculator-explanation hidden">
+            <h3>Как се пресмята балът за специалността "Приложен програмист"?</h3>
+            <p>
+                Вашият бал се изчислява на базата на резултатите от Националното външно оценяване (НВО) и оценките от удостоверението за завършване на основно образование. Формулата за изчисляване на бала е следната:
+            </p>
+            <ul>
+                
+                <li>✔️ Точките от НВО по Български език и литература се умножават по 2.</li>
+                <li>✔️ Точките от НВО по Математика също се умножават по 2.</li>
+                <li>Към сбора се добавят оценките по:
+                    <ul>
+                        <li><strong>✔️ Информационни технологии:</strong> преобразувана в точки: 
+                            <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
+                        </li>
+                        <li><strong>✔️ Чужд език:</strong> преобразувана в точки: 
+                            <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                Максималният бал, който можете да постигнете, е <strong>500 точки</strong>. 
+            </p>
+            <p>
+                Той се събира от 200 точки за НВО по Български език и литература, 200 точки за НВО по Математика и 100 точки от оценките по Информационни технологии и Чужд език.
+            </p>
+            <p>
+                Нашата професионална паралелка "Приложен програмист" е насочена към ученици, които искат да развият умения в програмирането, информационните технологии и чуждите езици. Състезателният бал помага да се подберат най-мотивираните кандидати за специалността.
+            </p>
+        </div>
+        
+        
+    
+    
+    
+    
+
+
+
+
+
+    <footer>
+        <p>© 2025 СУ "Йордан Йовков" - Сливен | Всички права запазени</p>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const belPointsInput = document.getElementById('belPoints');
+    const mathPointsInput = document.getElementById('mathPoints');
+    const resultBox = document.getElementById('result');
+
+    let itGradePoints = 0; // Съхранява избора на оценка по ИТ
+    let langGradePoints = 0; // Съхранява избора на оценка по чужд език
+
+    // Ограничаване на стойности до 100
+    [belPointsInput, mathPointsInput].forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.value > 100) {
+                input.value = 100;
+            } else if (input.value < 0) {
+                input.value = 0;
+            }
+        });
+    });
+
+    // Инициализация на персонализираните менюта
+    document.querySelectorAll('.custom-select').forEach(select => {
+        const trigger = select.querySelector('.custom-select-trigger');
+        const options = select.querySelector('.custom-options');
+
+        trigger.addEventListener('click', () => {
+            options.style.display = options.style.display === 'block' ? 'none' : 'block';
+        });
+
+        select.querySelectorAll('.custom-option').forEach(option => {
+            option.addEventListener('click', () => {
+                trigger.textContent = option.textContent;
+
+                // Проверка към кое поле се отнася избраната стойност
+                const label = select.closest('.input-group').querySelector('label').textContent;
+                if (label.includes("Информационни технологии")) {
+                    itGradePoints = parseInt(option.getAttribute('data-value')); // Вземане на стойността за ИТ
+                } else if (label.includes("Чужд език")) {
+                    langGradePoints = parseInt(option.getAttribute('data-value')); // Вземане на стойността за чужд език
+                }
+
+                options.style.display = 'none';
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.custom-select')) {
+                options.style.display = 'none';
+            }
+        });
+    });
+
+    // Изчисляване на бала
+    document.getElementById('calculateBal').addEventListener('click', () => {
+        const belPoints = parseInt(belPointsInput.value) || 0; // Точки по БЕЛ
+        const mathPoints = parseInt(mathPointsInput.value) || 0; // Точки по математика
+
+        // Изчисление на бала
+        const totalBal = (belPoints * 2) + (mathPoints * 2) + itGradePoints + langGradePoints;
+
+        // Показване на резултата
+        resultBox.textContent = `Твоят бал е: ${totalBal}`;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Спира наблюдението след появяването
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(el => observer.observe(el));
+});
+
+
+
+    </script>
+</body>
+</html>
