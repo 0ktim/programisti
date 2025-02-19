@@ -169,7 +169,7 @@ animation-fill-mode: forwards; /* Запазва крайното състоян
 #spline-wrapper {
     position: absolute;
     top: 10%;
-    left: 0%;
+    right: 2.5%;
     width: 100%;
     height: 95%;
     pointer-events: none; /* Пропускане на кликове към елементите под него */
