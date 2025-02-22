@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СУ "Йордан Йовков" - Приложен програмист</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/scrollBar.css">
+
+
+</head>
+<body>
+    <header>
+        <img src="/images/firstPageImages/logo.png" alt="СУ Йордан Йовков">
+
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Начало</a></li>
+                <li><a href="#a">Балообразуване</a></li>
+                <li>
+                    <a href="#program">Обучение</a>
+                    <ul>
+                        <li><a href="#curriculum">Учебна програма</a></li>
+                        <li><a href="extracurricularАctivities.html">Извънкласни дейности</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Проекти</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img class="banner-img" src="/images/firstPageImages/Banner.png" alt="Програмиране">
+
+    <div id="spline-wrapper">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
+        <spline-viewer events-target="global" id="robot-viewer" url="https://prod.spline.design/m6b73mxU2W0NUsSj/scene.splinecode"></spline-viewer>
+    </div>
+
+    <section class="section" id="about" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); border-radius: 15px;">
+        <h2>При нас ще се научите да програмирате и разработвате:</h2>
+        <div class="icon-grid">
+            <div>
+                <img src="/images/firstPageImages/icon-web.png" alt="Уеб приложения">
+                <p>Уеб приложения</p>
+            </div>
+            <div>
+                <img src="/images/firstPageImages/icon-mobile.png" alt="Mобилни приложения">
+                <p>Мобилни приложения</p>
+            </div>
+            <div>
+                <img src="/images/firstPageImages/icon-programming.png" alt="Програмиране">
+                <p>Десктоп приложения</p>
+            </div>
+            <div>
+                <img src="/images/firstPageImages/icon-db.png" alt="Бази данни">
+                <p>Бази данни</p>
+            </div>
+            <div>
+                <img src="/images/firstPageImages/icon-ai.png" alt="Изкуствен интелект">
+                <p>Изкуствен интелект</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="slider-container">
+        <h2 class="slider-title">Какво казват за нас нашите ученици?
+        </h2>
+        <div class="slider">
+            <button class="nav-button prev-button">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            
+            <div class="slider-content">
+                <div class="slides" id="slides"></div>
+            </div>
+
+            <button class="nav-button next-button">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+        <div class="dots-container" id="dots"></div>
+    </div>
+
+    <section class="banner">
+        <h1>Създаваме бъдещето на технологиите!</h1>
+        <p>Да вдъхновим младите да бъдат създатели на технологиите, които оформят света.</p>
+        <button>Научи повече</button>
+    </section>
+
+
+    <footer>
+        <p>© 2025 СУ "Йордан Йовков" - Сливен | Всички права запазени</p>
+    </footer>
+
+    <script src="js/home.js" defer></script>
+    <script src="js/robot.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
+    <script src="js/effects.js" defer></script>
+
+</body>
+</html>
