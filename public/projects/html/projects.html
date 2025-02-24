@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/scrollBar.css">
+
+</head>
+<body>
+    <header>
+        <img src="/images/firstPageImages/logo.png" alt="СУ Йордан Йовков">
+
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="#a">Балообразуване</a></li>
+                <li>
+                    <a href="#program">Обучение</a>
+                    <ul>
+                        <li><a href="#curriculum">Учебна програма</a></li>
+                        <li><a href="extracurricularАctivities.html">Извънкласни дейности</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html">Проекти</a></li>
+                <li><a href="#contacts">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="projects-container">
+    <div class="project-card">
+        <img src="images/projectImages/Hand.jpg" alt="Smart Home" class="project-image">
+        <h3 class="project-title">Роботизирана ръка</h3>
+        <p class="project-description">
+            Нашият проект представлява функционален модел на роботизирана ръка.
+            Създадохме механизъм, който позволява на пръстите да се свиват и разгъват, което дава възможност за захващане на леки предмети.
+            Ръката е изградена от леки и достъпни материали, а за задвижването сме използвали основни механизми като корда и малки моторчета. 
+            Управлението става чрез камера, свързана с ръката. </p>
+        <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">Motors</span>
+            <span class="tech-tag">Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+
+    <div class="project-card">
+        <img src="images/projectImages/ParkingProject.jpg" alt="Weather Station" class="project-image">
+        <h3 class="project-title">Паркинг</h3>
+        <p class="project-description">
+        Проектът включва макет на паркинг, който отчита броя на свободните места и предоставя информация на посетителите чрез дисплей на входа.        
+        <br><br> 
+        Бариерата на входа се отваря автоматично при засичане на автомобил с помощта на сензори, като управлението ѝ се осъществява чрез сервомотор. Дисплеят на входа показва актуалния брой налични паркоместа. Ако паркингът е запълнен, системата известява за липсата на свободни места и не позволява вдигането на бариерата, докато не се освободи място.</p>
+        <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">OLED</span>
+            <span class="tech-tag">Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+
+    <div class="project-card">
+        <img src="images/projectImages/Mini Robots.jpg" alt="Robot" class="project-image">
+        <h3 class="project-title">Мини роботи</h3>
+        <p class="project-description">Тези мини роботи са създадени с micro:bit контролер и ултразвукови сензори, което им позволява автономно движение и разпознаване на препятствия.
+            <br><br>Всеки робот разполага с ултразвуков сензор, който измерва разстоянието до обекти, и LED индикатори, които сигнализират различни състояния. Micro:bit контролерът осигурява управление, а вградените сензори като акселерометър и гироскоп помагат за стабилност и допълнителни функционалности.
+        </p>
+        <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">Motors</span>
+            <span class="tech-tag">IR Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+    <div class="project-card">
+        <img src="images/projectImages/ParkingProject.jpg" alt="Weather Station" class="project-image">
+        <h3 class="project-title">Роботизирана ръка</h3>
+        <p class="project-description">
+        Проектът включва макет на паркинг, който отчита броя на свободните места и предоставя информация на посетителите чрез дисплей на входа.        
+        <br><br> 
+        Бариерата на входа се отваря автоматично при засичане на автомобил с помощта на сензори, като управлението ѝ се осъществява чрез сервомотор. Дисплеят на входа показва актуалния брой налични паркоместа. Ако паркингът е запълнен, системата известява за липсата на свободни места и не позволява вдигането на бариерата, докато не се освободи място.        </p>
+        <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">OLED</span>
+            <span class="tech-tag">Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+    <div class="project-card">
+        <img src="images/projectImages/ParkingProject.jpg" alt="Weather Station" class="project-image">
+        <h3 class="project-title">Роботизирани очи</h3>
+        <p class="project-description">
+            Тези роботизирани очи са създадени от учениците от СУ "Йордан Йовков". Те са изработени с помощта на 3D принтирани компоненти, метални рамки и серво мотори, които осигуряват реалистично движение в различни посоки.
+            <br><br>
+            Системата се управлява чрез мини контролер, който координира движенията на очите въз основа на предварително зададени команди или входни данни от сензори. Очите могат да се въртят нагоре, надолу, наляво и надясно, като създават ефект на проследяване на обекти. 
+            <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">OLED</span>
+            <span class="tech-tag">Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+    <div class="project-card">
+        <img src="images/projectImages/image.png" alt="Weather Station" class="project-image">
+        <h3 class="project-title">Лего робот</h3>
+        <p class="project-description">
+            Този Лего робот е създаден от учениците от СУ "Йордан Йовков" с помощта на LEGO Mindstorms EV3, което му позволява да изпълнява различни задачи чрез програмируем контролер и сензори. Конструкцията му е изградена от Лего елементи, които могат да бъдат комбинирани по различни начини за създаване на различни видове роботи.        <br><br> 
+        Създаден като част от образователен проект, този робот дава възможност на учениците да развиват умения по програмиране, инженерство и роботика, като експериментират с различни алгоритми и механизми.
+        </p>
+        <div class="tech-stack">
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">OLED</span>
+            <span class="tech-tag">Sensors</span>
+        </div>
+        <button class="view-details">Виж повече</button>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 СУ "Йордан Йовков" - Сливен | Всички права запазени</p>
+</footer>
+
+<script src="js/projects.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/scrollBar.js" defer></script>
+
+</body>
+</html>
