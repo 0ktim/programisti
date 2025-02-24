@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #19115d, #3B82F6, #4a2e93);
+    color: #fff;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links > li:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    color: #15171c;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+}
+
+.activity-section {
+    margin: 6rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+}
+
+.activity-section:nth-child(even) {
+    direction: rtl;
+}
+
+.activity-section > * {
+    direction: ltr;
+}
+
+.activity-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-content {
+    padding: 2rem;
+}
+
+.activity-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #9856d6;
+    display: inline-block;
+}
+
+.activity-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    text-align: center;
+    font-size: large;
+    color: #ffffff;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+/* Navigation styles */
+.nav-container {
+    height: auto;
+    padding: 0.5rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 45px;
+    margin: 0 auto !important;
+    display: block;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.nav-links {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: none;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    z-index: 100;
+}
+
+.nav-links > li {
+    text-align: center;
+    width: 20%;
+}
+
+.nav-links a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.nav-links a.active {
+    background: none;
+    color: #000000;
+}
+
+.nav-links a.active::before {
+    background: linear-gradient(45deg, #000000, #000000);
+    transform: translateY(-24px);
+    box-shadow: 0 4px 8px rgba(79, 230, 225, 0.2);
+}
+
+.nav-links a::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(45deg, #000000, #000000);
+    mask-size: 24px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+/* Navigation icons */
+.nav-links a[href="index.html"]::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.nav-links a[href="#about"]::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E");
+}
+
+.nav-links a[href="extracurricularАctivities.html"]::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9z'/%3E%3C/svg%3E");
+}
+
+.nav-links a[href="projects.html"]::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.nav-links a[href="#contact"]::before {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+}
+
+.submenu {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+    z-index: 99;
+}
+
+.nav-links > li:hover .submenu {
+    transform: translateY(0);
+}
+
+.submenu a {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+/* Content styles */
+.activity-section {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.activity-section:nth-child(even) {
+    direction: ltr;
+}
+
+.activity-content {
+    padding: 1rem 0;
+}
+
+.activity-title {
+    font-size: 2rem;
+}
+
+.activity-image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* General layout */
+body {
+    padding-bottom: 80px;
+}
+
+footer {
+    margin-bottom: 70px;
+}
+
+.container {
+    padding: 1rem;
+}
+}
+
+/*New update*/
+.activity-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Секции, които ще се появяват от лявата страна */
+.activity-section[data-section="1"],
+.activity-section[data-section="3"] {
+    transform: translateX(-100px);
+}
+
+/* Секции, които ще се появяват от дясната страна */
+.activity-section[data-section="2"],
+.activity-section[data-section="4"] {
+    transform: translateX(100px);
+}
+
+/* Клас за анимиране при появяване в зрителното поле */
+.activity-section.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+/* Редуване на посоката на секциите */
+.activity-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.activity-image {
+    flex: 0 0 40%;
+    margin-right: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.activity-section:nth-child(even) .activity-image {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.activity-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    filter: contrast(1.05);
+}
+
+.activity-image img:hover {
+    transform: scale(1.05);
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    margin-bottom: 15px;
+    color: #A855F7;
+    font-size: 28px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.activity-description {
+    line-height: 1.6;
+    font-size: 16px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .activity-section,
+    .activity-section:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .activity-image,
+    .activity-section:nth-child(even) .activity-image {
+        margin: 0 0 20px 0;
+        flex: none;
+        width: 100%;
+    }
+}
