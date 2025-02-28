@@ -13,7 +13,7 @@
     to { opacity: 1; }
 }
 
-.banner h1 {
+.banner h2 {
     font-size: 50px;
     font-weight: bold;
     margin: 0;
@@ -27,8 +27,9 @@
 }
 
 .banner button {
-    padding: 12px 25px;
-    font-size: 25px;
+    padding: 15px 30px;
+    font-size: 30px;
+    font-weight: 700;
     margin-top: 50px;
     color: #fff;
     background: linear-gradient(135deg, #7329f1, #ab148a);
@@ -67,7 +68,7 @@
     }
 }
 
-.section h2 {
+.section h1 { 
 font-size: 36px;
 margin-bottom: 40px;
 color: #ffffff;
@@ -185,20 +186,30 @@ spline-viewer {
 
 
 @media (max-width: 768px) {
-    .section h2 {
-        font-size: 26px;
+
+    #spline-viewer{
+        visibility: hidden;
+        height: 0;
+    }
+    .section h1 { 
+        font-size: 115%;
         white-space:unset;
         animation: typing 0.1s steps(1, end), blink 0.2s step-end infinite;
         animation-iteration-count: 1, 1;
         animation-fill-mode: forwards;
     }
-
+    .banner-img {
+        margin-top: 0px;
+    }
     .banner {
         padding: 10px;
     }
-    .banner h1 {
-        font-size: 25px;
+    .banner h2 {
+        font-size: 125%;
     }
+    .banner p{
+        font-size: 105%;
+    } 
     .popup {
         padding: 5%;
         width: 90%;
@@ -212,4 +223,5 @@ spline-viewer {
     .popup h3 {
         font-size: 22px;
     }
+
 }

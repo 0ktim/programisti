@@ -2,37 +2,37 @@ const testimonials = [
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Веселин Стоянов",
-        image: "images/firstPageImages/image.png"
+        image: "images/image.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Венцислав Колев",
-        image: "images/firstPageImages/men.png"
+        image: "images/men.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Павел Караганев",
-        image: "images/firstPageImages/image.png"
+        image: "images/image.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Габриела Стефанова",
-        image: "images/firstPageImages/image.png"
+        image: "images/image.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Божидара Симеонова",
-        image: "images/firstPageImages/men.png"
+        image: "images/men.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Гергана Пенева",
-        image: "images/firstPageImages/men.png"
+        image: "images/men.png"
     },
     {
         text: "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.",
         name: "Гергана Пенева",
-        image: "images/firstPageImages/image.png"
+        image: "images/image.png"
     }
 ];
 

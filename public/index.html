@@ -6,6 +6,9 @@
     <title>СУ "Йордан Йовков" - Приложен програмист</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/scrollBar.css">
+
 </head>
 <body>
     <header>
@@ -25,10 +28,10 @@
                     <a href="#program">Обучение</a>
                     <ul>
                         <li><a href="#curriculum">Учебна програма</a></li>
-                        <li><a href="#extracurricular">Извънкласни дейности</a></li>
+                        <li><a href="extracurricular.html">Извънкласни дейности</a></li>
                     </ul>
                 </li>
-                <li><a href="#projects">Проекти</a></li>
+                <li><a href="projects.html">Проекти</a></li>
                 <li><a href="#contacts">Контакти</a></li>
             </ul>
         </nav>
@@ -67,12 +70,30 @@
         </div>
     </section>
     
+    <div class="slider-container">
+        <h2 class="slider-title">Какво казват за нас нашите ученици?
+        </h2>
+        <div class="slider">
+            <button class="nav-button prev-button">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            
+            <div class="slider-content">
+                <div class="slides" id="slides"></div>
+            </div>
+
+            <button class="nav-button next-button">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+        <div class="dots-container" id="dots"></div>
+    </div>
 
     <section class="banner">
         <h2>Започни кариерата си в програмирането още като ученик!</h2>
         <p>Нашата цел е да вдъхновим младите умове да преминат от консуматори на технологии към нейни създатели.</p>
         
-        <a href="html\bal.html">
+        <a href="bal.html">
             <button>Изчисли своя бал</button>
         </a>
     </section>
@@ -85,5 +106,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/home.js" defer></script>
     <script src="js/robot.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
+
 </body>
 </html>
