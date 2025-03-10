@@ -2,11 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const divs = document.querySelectorAll('.icon-grid div');
     const popup = document.createElement('div');
     const overlay = document.createElement('div');
+    const closeButton = document.createElement('button');  // Създаване на затварящ бутон
 
     popup.classList.add('popup');
     overlay.classList.add('popup-overlay');
+    closeButton.classList.add('close-button');  // Добавяме клас за бутона
+    closeButton.innerText = 'X';  // Бутона да е X
+
     document.body.appendChild(popup);
     document.body.appendChild(overlay);
+    popup.appendChild(closeButton);  // Показване на бутона в popup
 
     const data = {
         'Десктоп приложения': 'Десктоп приложенията са софтуерни програми, създадени за работа на компютри и лаптопи с операционни системи като Windows, macOS или Linux. Те могат да бъдат текстови редактори, мултимедийни плейъри или сложни бизнес софтуери. Ще научите как да създавате стабилни и ефективни приложения с помощта на технологии като C#, .NET и WPF, които улесняват ежедневието на милиони хора.',
@@ -21,15 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = div.querySelector('p').innerText;
             const imgSrc = div.querySelector('img').src;
 
+            div.classList.add('break');
+            
             popup.innerHTML = `
                 <img src="${imgSrc}" alt="${title}">
                 <h3>${title}</h3>
                 <p>${data[title]}</p>
             `;
-
+            popup.appendChild(closeButton);
             popup.style.display = 'block';
             overlay.style.display = 'block';
         });
+    });
+
+    // Затварящ бутон - function
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
     overlay.addEventListener('click', () => {
