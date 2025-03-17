@@ -1,0 +1,350 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4a2e93, #19115d);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Центриране само на калкулатора */
+.calculator-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Центриране на секцията */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calculator-container {
+    background: linear-gradient(135deg, rgba(115, 41, 241, 0.7), rgba(21, 206, 235, 0.5));
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 850px; /* Ограничаване на ширината */
+}
+
+.calculator-container h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ab148a, 0 0 20px #7329f1;
+    animation: glow 2s infinite alternate;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    outline: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px #7329f1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    max-width: 100%;
+    max-height: 50px;
+    font-size: 1.5rem;
+    appearance: textfield;
+}
+
+select {
+    appearance: none;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+select:focus {
+    box-shadow: 0 0 15px #7329f1;
+}
+
+select option {
+    color: #fff;
+    background: rgba(50, 50, 150, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+.calculate-btn {
+    padding: 15px 35px;
+    font-size: 2rem;
+    color: #fff;
+    background: linear-gradient(135deg, #7329f1, #ff4db3);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 5px #fff;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #803df5, #ff77d4);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.result-box {
+    margin-top: 40px;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff4db3, 0 0 20px #7329f1;
+    }
+    to {
+        text-shadow: 0 0 20px #ff4db3, 0 0 30px #7329f1;
+    }
+}
+.custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+}
+
+.custom-select-trigger {
+    display: block;
+    padding: 11px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.custom-select-trigger:hover {
+    box-shadow: 0 0 15px #7329f1;
+    transform: scale(1.05); /* Леко уголемяване при задържане */
+}
+
+.custom-options {
+    position: absolute;
+    display: none;
+    top: calc(100% + 5px);
+    left: 0;
+    right: 0;
+    background: rgba(50, 50, 150, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out; /* Анимация при появяване */
+}
+
+.custom-option {
+    height: 50px;
+    padding: 0 20px; /* само хоризонтален padding */
+    line-height: 50px; /* Центриране на текста вертикално */
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+.custom-option:hover {
+    color: #9af2ff;
+    text-shadow: 0 0 15px #0aaac2, 0 0 40px #0aaac2; /* Светещо синьо */
+
+}
+
+.custom-select.open .custom-options {
+    display: block;
+}
+
+/* Анимация за плавно появяване */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Скриване на стрелките за default dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Скриване на default стрелка за input type=number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/*обяснение под калкулатора*/
+.calculator-explanation {
+    width: 95%;
+    margin: 30px auto ;
+    margin-bottom: 50px;
+    padding: 45px;
+    background: linear-gradient(135deg, rgba(115, 41, 241, 0.7), rgba(21, 206, 235, 0.5));
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.calculator-explanation:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.calculator-explanation h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px #15ceeb, 0 0 20px #7329f1;
+    color: #fff;
+    font-weight: bold;
+}
+
+.calculator-explanation p {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #e0f7ff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.calculator-explanation ul {
+    margin: 15px 0;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.calculator-explanation ul li {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+    position: relative;
+    padding-left: 25px;
+    color: #fffbf0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
+.calculator-explanation strong {
+    color: #fabbfa; /* Подчертаване на важни думи */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+
+}
+
+.calculator-explanation em {
+    color: #ffffc6; /* Подчертаване на обясненията */
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Леко изместване надолу */
+    transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0px); /* Премахва изместването */
+    
+}
+
+@media (max-width: 768px) {
+
+    .calculator-container{
+        width: 95%;
+        padding: 20px;
+    }
+    .calculator-container h2 {
+        font-size: 160%;
+    }
+    .input-group label{
+        font-size: 135%;
+    }
+    .calculate-btn{
+        font-size: 175%;
+    }
+    .custom-option{
+        display: block;
+    }
+    .result-box{
+        font-size: 170%;
+    }
+    .calculator-explanation h3{
+        font-size: 60% ;
+    }
+    .calculator-explanation p  {
+            font-size: 50%;
+    }
+    .calculator-explanation ul  li   {
+        margin:0;
+        padding: 0;
+        font-size: 50%;
+    }
+    .calculator-explanation ul  li li  {
+        font-size: 90%;
+    }
+}
