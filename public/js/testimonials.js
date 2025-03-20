@@ -6,7 +6,7 @@ const testimonials = [
         image: "images/vesko.jpg"
     },
     {
-        text: "Винаги съм се интересувала от програмиране и исках да уча нещо практично за бъдещето. Тук работим по реални проекти, а учителите са много мотивиращи и винаги готови да помогнат. Усвоих HTML, CSS и вече успешно пиша програми на C#. Тези умения ще ми помогнат много за бъдеща кариера в IT сферата. Ако обичате технологиите и искате да развиете реални умения – това е правилното място! ",
+        text: "Винаги съм се интересувала от програмиране и исках да уча нещо практично за бъдещето. Тук работим по реални проекти, а учителите са много мотивиращи и винаги готови да помогнат. Усвоих HTML, CSS и вече успешно пиша програми на C#. Тези умения ще ми помогнат много за бъдеща кариера в IT сферата. Ако обичате технологиите и искате да развиете реални умения, това е правилното място! ",
         name: "Десислава Христова",
         class: "9. клас",
         image: "images/desislava.jpg"
@@ -49,12 +49,12 @@ const testimonials = [
     }
 ];
 
+
 let currentSlide = 0;
 const slidesContainer = document.getElementById('slides');
 const dotsContainer = document.getElementById('dots');
-
-// Добавяме променлива за брой на точките
-let numberOfDots = 6; 
+let numberOfDots = 6;
+let slidePercentage = 33.33; // Добавяме глобална променлива за процента
 
 function createStarRating(rating) {
     return Array(rating).fill().map(() => 
@@ -83,7 +83,7 @@ function createSlide(testimonial) {
                 </div>
             </div>
         </div>
-    `;
+    `
 }
 
 function createDots() {
@@ -92,31 +92,37 @@ function createDots() {
     }).join('');
 }
 
+// Модифицирана функция за обновяване на слайдове - работи с процент
 function updateSlides() {
-    slidesContainer.style.transform = `translateX(-${currentSlide * 33.33}%)`;
+    slidesContainer.style.transform = `translateX(-${currentSlide * slidePercentage}%)`;
     updateActiveDot();
 }
 
 function updateActiveDot() {
     const dots = document.querySelectorAll('.dot');
     dots.forEach(dot => dot.classList.remove('active'));
-    dots[currentSlide].classList.add('active');
+    if (dots[currentSlide]) {
+        dots[currentSlide].classList.add('active');
+    }
 }
 
+// Модифицирани функции за навигация
 function nextSlide() {
-    if (currentSlide < testimonials.length - 3) {
+    const slidesPerView = getSlidesPerView();
+    if (currentSlide < testimonials.length - slidesPerView) {
         currentSlide++;
     } else {
-        currentSlide = 0; // Променено за да се върти в кръг
+        currentSlide = 0;
     }
     updateSlides();
 }
 
 function prevSlide() {
+    const slidesPerView = getSlidesPerView();
     if (currentSlide > 0) {
         currentSlide--;
     } else {
-        currentSlide = testimonials.length - 3; // Променено за да се върти в кръг
+        currentSlide = testimonials.length - slidesPerView;
     }
     updateSlides();
 }
@@ -126,19 +132,94 @@ function goToSlide(index) {
     updateSlides();
 }
 
-// Инициализация на слайдера
-slidesContainer.innerHTML = testimonials.map(testimonial => 
-    createSlide(testimonial)
-).join('');
-dotsContainer.innerHTML = createDots();
+// Нова функция за определяне броя на видимите слайдове
+function getSlidesPerView() {
+    const width = window.innerWidth;
+    if (width <= 768) {
+        return 1;
+    } else if (width <= 992) {
+        return 2;
+    }
+    return 3;
+}
 
-// Добавяне на event listeners
-document.querySelector('.prev-button').addEventListener('click', prevSlide);
-document.querySelector('.next-button').addEventListener('click', nextSlide);
-
-document.querySelectorAll('.dot').forEach(dot => {
-    dot.addEventListener('click', (e) => {
-        goToSlide(parseInt(e.target.getAttribute('data-index')));
+// Функция за актуализиране на слайдера при промяна на размера
+function updateSliderForScreenSize() {
+    const width = window.innerWidth;
+    let slidesPerView = getSlidesPerView();
+    
+    // Актуализиране на процента на плъзгане
+    if (width <= 768) {
+        slidePercentage = 100;
+    } else if (width <= 992) {
+        slidePercentage = 50;
+    } else {
+        slidePercentage = 33.33;
+    }
+    
+    // Проверка дали текущият слайд е валиден
+    if (currentSlide > testimonials.length - slidesPerView) {
+        currentSlide = testimonials.length - slidesPerView;
+    }
+    
+    // Пренастройване на броя точки според видимите слайдове
+    numberOfDots = testimonials.length - slidesPerView + 1;
+    
+    // Обновяване на DOM елементите
+    dotsContainer.innerHTML = createDots();
+    
+    // Преприкачване на event listeners към новите точки
+    document.querySelectorAll('.dot').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            goToSlide(parseInt(e.target.getAttribute('data-index')));
+        });
     });
+    
+    // Актуализиране на позицията
+    updateSlides();
+}
+
+// Инициализация на слайдера
+function initSlider() {
+    // Създаване на слайдове
+    slidesContainer.innerHTML = testimonials.map(testimonial => 
+        createSlide(testimonial)
+    ).join('');
+    
+    // Инициализиране на слайдера за текущия размер на екрана
+    updateSliderForScreenSize();
+    
+    // Добавяне на event listeners към бутоните
+    document.querySelector('.prev-button').addEventListener('click', prevSlide);
+    document.querySelector('.next-button').addEventListener('click', nextSlide);
+}
+
+// Стартиране при зареждане
+document.addEventListener('DOMContentLoaded', initSlider);
+
+// Актуализиране при промяна на размера
+window.addEventListener('resize', updateSliderForScreenSize);
+
+// Добавяне на swipe функционалност за мобилни устройства
+let touchStartX = 0;
+let touchEndX = 0;
+
+slidesContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
 });
+
+slidesContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchEndX < touchStartX) {
+        // Swipe наляво - следващ слайд
+        nextSlide();
+    } else if (touchEndX > touchStartX) {
+        // Swipe надясно - предишен слайд
+        prevSlide();
+    }
+}
 

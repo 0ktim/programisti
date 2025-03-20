@@ -156,10 +156,11 @@
     font-weight: 400;
 }
 
-/* Mobile responsive */
+
+/* Mobile responsive - portrait */
 @media screen and (max-width: 768px) {
     .activity-section {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         gap: 2rem;
         margin: 3rem 0;
     }
@@ -180,6 +181,11 @@
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
+        margin-right: 0;
+    }
+    
+    .activity-section:nth-child(even) .activity-image {
+        margin-left: 0;
     }
     
     body {
@@ -192,5 +198,53 @@
     
     .container {
         padding: 1rem;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .activity-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .activity-section:nth-child(odd) {
+        direction: ltr;
+    }
+    
+    .activity-section:nth-child(even) {
+        direction: rtl;
+    }
+    
+    .activity-image {
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1;
+    }
+    
+    .activity-content {
+        grid-column: 2;
+        text-align: left;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .activity-section:nth-child(even) .activity-content {
+        text-align: left; /* Променено от right на left */
+    }
+    
+    .activity-title {
+        font-size: 1.3rem;
+    }
+    
+    .activity-description {
+        font-size: 0.85rem;
+    }
+    
+    body {
+        padding-bottom: 60px;
     }
 }

@@ -184,44 +184,88 @@ spline-viewer {
 }
 
 
-
-@media (max-width: 768px) {
-
-    #spline-viewer{
-        visibility: hidden;
-        height: 0;
+.section#Career {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    min-height: 200px; /* Минимална височина */
+    height: auto; /* Автоматична височина според съдържанието */
+    max-height: 38rem; /* Максимална височина на десктоп */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Media query за мобилни устройства */
+@media screen and (max-width: 768px) {
+    /* Стилове за секцията */
+    .section#about {
+      max-height: none;
+      height: auto;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
     }
+    
+    /* Стилове за заглавия и текст */
     .section h1 { 
-        font-size: 115%;
-        white-space:unset;
-        animation: typing 0.1s steps(1, end), blink 0.2s step-end infinite;
-        animation-iteration-count: 1, 1;
-        animation-fill-mode: forwards;
+      font-size: 115%;
+      white-space: unset;
+      animation: typing 0.1s steps(1, end), blink 0.2s step-end infinite;
+      animation-iteration-count: 1, 1;
+      animation-fill-mode: forwards;
     }
-    .banner-img {
-        margin-top: 0px;
-    }
+    
+    /* Стилове за банер и съдържание */
     .banner {
-        padding: 10px;
+      padding: 10px;
     }
+    
     .banner h2 {
-        font-size: 125%;
+      font-size: 125%;
     }
-    .banner p{
-        font-size: 105%;
-    } 
+    
+    .banner p {
+      font-size: 105%;
+    }
+    
+    .banner button {
+      padding: 0.5rem 1rem;
+    }
+    
+    .banner-img {
+      margin-top: 0px;
+    }
+    
+    /* Скриване на 3D елемент */
+    #spline-viewer {
+      visibility: hidden;
+      height: 0;
+    }
+    
+    /* Стилове за попъп */
     .popup {
-        padding: 5%;
-        width: 90%;
+      padding: 5%;
+      width: 90%;
     }
+    
     .popup img {
-        width: 100px;
+      width: 100px;
     }
-    .popup p {
-        font-size: 16px;
-    }
+    
     .popup h3 {
-        font-size: 22px;
+      font-size: 22px;
     }
-
-}
+    
+    .popup p {
+      font-size: 16px;
+    }
+  }
+  
+  /* Media query за завъртяно устройство (landscape) */
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    .section#about {
+      max-height: 80vh;
+      margin-bottom: 0.5rem;
+    }
+  }
