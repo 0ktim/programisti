@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
               if (entry.isIntersecting) {
-                  entry.target.classList.add('visible');
+                   entry.target.classList.add('visible');
               } else {
                   entry.target.classList.remove('visible');
               }
@@ -41,14 +41,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function checkVisibility() {
+        sections2.forEach(section => {
+            if (isElementInViewport(section)) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
+    function checkVisibility() {
+        sections3.forEach(section => {
+            if (isElementInViewport(section)) {
+                section.classList.add('visible');
+            }
+        });
+    }
+
     checkVisibility();
     
     window.addEventListener('scroll', checkVisibility);
     
-    sections.forEach((section, index) => {
-        section.setAttribute('data-section', (index + 1).toString());
+    
     });
-});
+
 
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -67,38 +82,32 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
   });
   document.addEventListener('DOMContentLoaded', function() {
-    // Get all carousel sections
+    
     const carouselSections = document.querySelectorAll('.activity-image');
     
-    // Initialize each carousel
     carouselSections.forEach(function(carousel, index) {
-      // Get all images in this carousel
+
       const images = carousel.querySelectorAll('img');
-      if (images.length <= 1) return; // Skip if only one or no images
+      if (images.length <= 1) return; 
       
-      // Set up the initial state
       let currentSlide = 0;
       
-      // Hide all images except the first one
       images.forEach((img, i) => {
         img.style.display = i === 0 ? 'block' : 'none';
-        img.classList.add('carousel-image'); // Ensure consistent class
+        img.classList.add('carousel-image');
       });
       
-      // Function to show the next slide
       function nextSlide() {
         images[currentSlide].style.display = 'none';
         currentSlide = (currentSlide + 1) % images.length;
         images[currentSlide].style.display = 'block';
         images[currentSlide].classList.add('fade');
-        
-        // Remove the fade class after animation completes
+
         setTimeout(() => {
           images[currentSlide].classList.remove('fade');
         }, 1500);
       }
-      
-      // Start the slideshow
       setInterval(nextSlide, 3000);
     });
   });
+

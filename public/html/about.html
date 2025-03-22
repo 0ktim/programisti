@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СУ "Йордан Йовков" - Извънкласни дейности</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/social.css">
-
+    <link rel="stylesheet" href="../css/mobile-responsive-about.css">
     
 </head>
 <body>
+
     <header>
         <img src="../images/logo.png" alt="СУ Йордан Йовков">
-
         <div class="nav-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <nav>
             <ul>
-                <li><a href="../index.html">Начало</a></li>
+                <li><a href="index.html">Начало</a></li>
                 <li><a href="../html/about.html">За паралелката</a></li>
                 <li>
-                    <a href="#">Обучение</a>
+                    <a href="#program">Обучение</a>
                     <ul>
-                        <li><a href="#">Учебна програма</a></li>
-                        <li><a href="#">Извънкласни дейности</a></li>
+                        <li><a href="#curriculum">Учебна програма</a></li>
+                        <li><a href="#extracurricular">Извънкласни дейности</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Проекти</a></li>
+                <li><a href="#projects">Проекти</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
             </ul>
         </nav>
@@ -48,13 +48,13 @@
         </div>
       </section>
 
-      <h1 class="h1" style="color: white; padding: 4rem 5% 0.2rem ; font-size: 2.4rem; margin-bottom: 2rem;">За паралелката</h1>
-    <div class="container" class="floating">
-        <section class="activity-section" data-section="1" style="background: radial-gradient(circle, rgba(63,72,251,1) 0%, rgba(104,70,252,1) 100%);">
+      <h1 style="color: white; padding: 4rem 5% 0.2rem ; font-size: 2.4rem; margin-bottom: 2rem;">За паралелката</h1>
+    <div class="container">
+        <section class="activity-section">
             <div class="activity-image" class="mySlides fade">
                 <img src="../images/first.jpg" alt="First" class="image-carousel">
-                <img src="../images/Banner2.png" alt="Arduino" class="image-carousel">
-                <img src="../images/icon-ai.png" alt="Arduino" class="image-carousel">
+                <img src="../images/Second.jpg" alt="Second" class="image-carousel">
+                <img src="../images/Third.jpg" alt="Third" class="image-carousel">
             </div>
             <div class="activity-content">
                 <h2 class="activity-title">Какво ще научиш при нас?</h2>
@@ -72,11 +72,11 @@
         
         <div class="divider"></div> 
         
-        <section class="activity-section" data-section="2" style="background: radial-gradient(circle, rgba(63,72,251,1) 0%, rgba(104,70,252,1) 100%);">
+        <section class="activity-section">
             <div class="activity-image" class="image-carousel">
-                <img src="../images/logo.png" alt="Arduino" class="carousel-image">
-                <img src="../images/Banner2.png" alt="Arduino" class="carousel-image">
-                <img src="../images/icon-ai.png" alt="Arduino" class="carousel-image">
+                <img src="../images/Fourth.jpg" alt="Fouth" class="carousel-image">
+                <img src="../images/Fifth.jpg" alt="Fifth" class="carousel-image">
+                <img src="../images/Sixth.jpg" alt="Sixth" class="carousel-image">
             </div>
             <div class="activity-content">
                 <h2 class="activity-title">Какво ще правим след това?</h2>
@@ -93,11 +93,11 @@
 
         <div class="divider"></div> 
 
-        <section class="activity-section" data-section="3" style="background: radial-gradient(circle, rgba(63,72,251,1) 0%, rgba(104,70,252,1) 100%);">
+        <section class="activity-section">
             <div class="activity-image" class="image-carousel">
-                <img src="../images/logo.png" alt="Arduino" class="carousel-image">
-                <img src="../images/Banner2.png" alt="Arduino" class="carousel-image">
-                <img src="../images/icon-ai.png" alt="Arduino" class="carousel-image">
+                <img src="../images/Seventh.jpg" alt="Seventh" class="carousel-image">
+                <img src="../images/Eight.jpg" alt="Eight" class="carousel-image">
+                <img src="../images/Nineth.jpg" alt="Nineht" class="carousel-image">
             </div>
             <div class="activity-content">
                 <h2 class="activity-title">Защо да изберем тази паралелка?</h2>
@@ -125,13 +125,13 @@
             <div class="footer-section">
                 <h4>Полезни връзки</h4>
                 <ul class="footer-links-list">
-                    <li><a href="../html/index.html">Начало</a></li>
-                    <li><a href="">За паралелката</a></li>
+                    <li><a href="index.html">Начало</a></li>
+                    <li><a href="..html/about.html">За паралелката</a></li>
                     <li><a href="">Учебна програма</a></li>
                     <li><a href="">Извънкласни дейности</a>
-                    <li><a href="../html/bal.html">Калкулатор за бал</a></li>
+                    <li><a href="..html/bal.html">Калкулатор за бал</a></li>
                     <li><a href="">Често задавани въпроси</a></li>
-                    <li><a href="../html/contact.html">Контакти</a></li>
+                    <li><a href="..html/contact.html">Контакти</a></li>
                 </ul>
             </div>
 
@@ -218,9 +218,10 @@
         </div>
     </footer>
 
-    <script src="../js/main.js" defer></script>
     <script src="../js/about.js" defer></script>
     <script src="../js/nevron.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/home.js" defer></script>
 
 </body>
 </html>
