@@ -212,8 +212,8 @@
 
     .activity-section:nth-child(3) .activity-image {
         grid-area: image;
-        margin-right: 0;
-        margin-left: 30px;
+        margin-right: 30px;
+        margin-left: 0px;
     }
 
     .activity-section:nth-child(3):hover .activity-content{
