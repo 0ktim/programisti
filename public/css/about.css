@@ -14,11 +14,15 @@
 
     h1{
         text-align: center;
+        color: white;
+        padding: 4rem 5% 0.2rem ;
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
     }
 
     .container {
-        max-width: 1600px;
-        margin: 0 auto;
+        max-width: 1400px;
+        margin: 3rem auto;
         padding: 2rem;
         position: relative;
     }
@@ -137,7 +141,7 @@
     }
 
     .activity-section:hover .activity-content {
-        transform: rotateY(-10deg) rotateX(-5deg);
+        transform: rotateY(-4deg) rotateX(-3deg);
       }
 
     .activity-title {
@@ -174,7 +178,7 @@
         animation: glow 3s infinite alternate;
         margin-bottom: 3rem;
     }
-
+    
     @keyframes glow {
         0% { opacity: 0.3; transform: scaleX(0.8); }
         100% { opacity: 1; transform: scaleX(1); }
@@ -196,4 +200,22 @@
     .activity-section.visible {
         opacity: 1;
         transform: translateX(0) translateY(0);
+    }
+
+    .activity-section:nth-child(3) {
+        grid-template-areas: "content image";
+    }
+
+    .activity-section:nth-child(3) .activity-content {
+        grid-area: content;
+    }
+
+    .activity-section:nth-child(3) .activity-image {
+        grid-area: image;
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .activity-section:nth-child(3):hover .activity-content{
+        transform: rotateY(4deg) rotateX(3deg);
     }

@@ -111,3 +111,35 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
   });
 
+
+
+
+  // Track which section to scroll to next
+let currentSectionIndex = 0;
+
+// Get references to the button and sections
+document.addEventListener('DOMContentLoaded', function() {
+    const learnMoreButton = document.querySelector('.hero-button');
+    const sections = document.querySelectorAll('.activity-section');
+    
+    if (learnMoreButton && sections.length > 0) {
+        learnMoreButton.addEventListener('click', function() {
+            // Get the section to scroll to
+            const targetSection = sections[currentSectionIndex];
+            
+            // Calculate scroll position with offset
+            const offset = 100; // Adjust this value to control how much higher the scroll should go
+            const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+            
+            // Scroll to the calculated position with smooth animation
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Increment the section index, and loop back if needed
+            currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+        });
+    }
+});
+

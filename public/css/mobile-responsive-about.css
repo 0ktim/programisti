@@ -79,7 +79,7 @@
     }
     
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         padding: 2rem 5% 0.2rem;
     }
     
@@ -104,6 +104,14 @@
     
     .divider {
         margin-bottom: 1.5rem;
+    }
+
+    .activity-section:nth-child(3) {
+        grid-template-areas: "image" "content";
+    }
+    
+    .activity-section:nth-child(3) .activity-image {
+        margin-left: 0;
     }
 }
 
