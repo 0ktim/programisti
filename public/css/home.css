@@ -4,7 +4,7 @@
 
 .banner {
     text-align: center;
-    padding: 120px;
+    padding: 100px;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -13,8 +13,9 @@
     to { opacity: 1; }
 }
 
+
 .banner h2 {
-    font-size: 50px;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
@@ -24,6 +25,8 @@
     font-size: 24px;
     margin: 20px 0;
     color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+
 }
 
 .banner button {
@@ -174,7 +177,7 @@ animation-fill-mode: forwards; /* Запазва крайното състоян
     height: 95%;
     pointer-events: none; /* Пропускане на кликове към елементите под него */
     z-index: 1;
-            transition: transform 1s ease-in-out; /* Анимация за плавно движение */
+    transition: transform 1s ease-in-out; /* Анимация за плавно движение */
     }
 
 spline-viewer {
