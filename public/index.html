@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/scrollBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
@@ -28,10 +30,10 @@
                     <a href="#program">Обучение</a>
                     <ul>
                         <li><a href="#curriculum">Учебна програма</a></li>
-                        <li><a href="#extracurricular">Извънкласни дейности</a></li>
+                        <li><a href="html/extracurricular.html">Извънкласни дейности</a></li>
                     </ul>
                 </li>
-                <li><a href="#projects">Проекти</a></li>
+                <li><a href="html/projects.html">Проекти</a></li>
                 <li><a href="html/contact.html">Контакти</a></li>
             </ul>
         </nav>
@@ -70,6 +72,24 @@
         </div>
     </section>
     
+    <div class="slider-container">
+        <br>
+        <h2 class="slider-title">Нашите ученици споделят</h2>
+        <div class="slider">
+            <button class="nav-button prev-button">
+                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            
+            <div class="slider-content">
+                <div class="slides" id="slides"></div>
+            </div>
+
+            <button class="nav-button next-button">
+                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+        <div class="dots-container" id="dots"></div>
+    </div>
 
     <section class="banner">
         <h2>Започни кариерата си в програмирането още като ученик!</h2>
@@ -96,7 +116,8 @@
                     <li><a href="index.html">Начало</a></li>
                     <li><a href="">За паралелката</a></li>
                     <li><a href="">Учебна програма</a></li>
-                    <li><a href="">Извънкласни дейности</a>
+                    <li><a href="html/extracurricular.html">Извънкласни дейности</a>
+                    <li><a href="html/projects.html">Проекти</a>
                     <li><a href="html/bal.html">Калкулатор за бал</a></li>
                     <li><a href="">Често задавани въпроси</a></li>
                     <li><a href="html/contact.html">Контакти</a></li>
@@ -126,7 +147,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <a href="https://maps.google.com/?q=СУ+Йордан+Йовков+Сливен" target="_blank" class="contact-link">
-                                <p>Кв. ж.к. Българка</p>
+                                <p>ж.к. Българка</p>
                                 <p>8800 Сливен</p>
                             </a>
                         </div>
@@ -189,5 +210,6 @@
     <script src="js/main.js" defer></script>
     <script src="js/home.js" defer></script>
     <script src="js/robot.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
 </body>
 </html>

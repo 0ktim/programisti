@@ -1,0 +1,283 @@
+h1{
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+
+}
+.projects-container {
+    max-width: 1130px;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+.project-image {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #4fe6e1;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+    flex-grow: 1;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: rgba(0, 255, 136, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid #4fe6e1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease; /* Плавна анимация за 0.3 секунди */
+
+}
+.tech-tag:hover {
+    transform: scale(1.03);
+}
+
+.site-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 80%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.site-banner-container:hover::before {
+    left: 100%;
+}
+
+.site-banner-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(79, 230, 225, 0.5);
+}
+
+.site-banner-iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.site-banner-text {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.under-construction-container {
+    text-align: center;
+    padding: 40px 0;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.construction-gif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.construction-gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.construction-text {
+    font-size: 24px;
+    color: #efefef;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Медийни запити - подредени от най-голям към най-малък екран */
+
+/* Десктоп и големи устройства */
+@media screen and (max-width: 992px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .site-banner-container {
+        width: 90%;
+    }
+}
+
+/* Таблети и средни устройства */
+@media screen and (max-width: 768px) {
+    /* Общи стилове за портретен режим */
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin: 2rem auto;
+    }
+    
+    .project-card {
+        transform: none;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .project-image {
+        height: auto;
+    }
+    
+    .site-banner-container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .site-banner-iframe {
+        height: 300px;
+    }
+    
+    .tech-stack {
+        gap: 0.3rem;
+    }
+    
+    .tech-tag {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Construction gif стилове */
+    .construction-gif {
+        padding: 15px;
+        margin: 30px auto;
+    }
+    
+    .construction-text {
+        font-size: 20px;
+    }
+}
+
+/* Малки устройства */
+@media screen and (max-width: 480px) {
+    .construction-gif {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .construction-text {
+        font-size: 18px;
+    }
+}
+
+/* Ландшафтен режим на мобилни устройства */
+@media screen and (max-width: 896px) and (orientation: landscape) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .project-image {
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .site-banner-iframe {
+        height: 250px;
+    }
+}
