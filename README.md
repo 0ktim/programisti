@@ -56,28 +56,39 @@
 
 ```
 /css
-  ├── base.css                 # Глобални стилове (фон, навигация, анимации)
-  ├── home.css                 # Начална страница
-  ├── bal.css                  # Калкулатор за бал
-  ├── about.css                # За паралелката
-  ├── training-program.css     # Учебна програма
-  ├── extracurricular.css      # Извънкласни дейности
-  ├── projects.css             # Проекти
-  ├── contact.css              # Контакти
+  ├── base.css                           # Глобални стилове (фон, навигация, анимации)
+  ├── home.css                           # Начална страница
+  ├── bal.css                            # Калкулатор за бал
+  ├── about.css                          # За паралелката
+  ├── training-program.css               # Учебна програма
+  ├── extracurricularActivities.css      # Извънкласни дейности
+  ├── projects.css                       # Проекти
+  ├── contact.css                        # Контакти
+  ├── scrollBar.css
+  ├── social.css
+  ├── testimonials.css
 
 /js
-  ├── main.js                  # Основни функции (меню, динамика)
-  ├── home.js                  # Анимации и popup ефекти за началната страница
-  ├── robot.js                 # Контролира 3D модела на роботчето
+  ├── main.js                            # Основни функции (меню, динамика)
+  ├── home.js                            # Анимации и popup ефекти за началната страница
+  ├── robot.js                           # Контролира 3D модела на роботчето
+  ├── contact.js                 
+  ├── effects.js
+  ├── extracurricularActivities.js
+  ├── form.js
+  ├── projects.js
+  ├── testimonials.js                
 
 /html
-  ├── index.html               # Начална страница
-  ├── about.html               # За паралелката
-  ├── training-program.html    # Учебна програма
-  ├── extracurricular.html     # Извънкласни дейности
-  ├── projects.html            # Проекти
-  ├── contact.html             # Контакти
-  ├── bal.html                 # Калкулатор за балообразуване
+  ├── index.html                         # Начална страница
+  ├── about.html                         # За паралелката
+  ├── training-program.html              # Учебна програма
+  ├── extracurricular.html               # Извънкласни дейности
+  ├── projects.html                      # Проекти
+  ├── contact.html                       # Контакти
+  ├── privacy-policy.html                 
+  ├── terms.html                 
+  ├── 404.html                 
 
 /images                        # Графични ресурси (икони, банери, 3D модели)
 ```
