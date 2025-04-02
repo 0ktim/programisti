@@ -255,6 +255,9 @@ h1{
 
 /* Малки устройства */
 @media screen and (max-width: 480px) {
+    h1{
+        font-size: 2rem;
+    }
     .construction-gif {
         padding: 10px;
         margin: 20px auto;

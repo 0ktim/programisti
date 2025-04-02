@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СУ "Йордан Йовков" - Приложен програмист</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/social.css">
+    <title>СУ "Йордан Йовков" - Извънкласни дейности</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
-
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/social.css">
+    <link rel="stylesheet" href="../css/mobile-responsive-about.css">
+    <link rel="stylesheet" href="../css/scrollBar.css">
+    
 </head>
 <body>
+
     <header>
-        <img src="/images/logo.png" alt="СУ Йордан Йовков">
+        <img src="../images/logo.png" alt="СУ Йордан Йовков">
         <div class="nav-toggle" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+        
         <nav>
             <ul>
                 <li><a href="../index.html">Начало</a></li>
@@ -36,20 +41,81 @@
         </nav>
     </header>
 
+    <section class="hero">
+        <canvas id="network"></canvas>
+        <div class="hero-content">
+          <h1 class="hero-title">Паралелка "Приложен програмист"</h1>
+          <p class="hero-subtitle">От първия ред код до първата иновация – твоята история започва тук!</p>
+          <button class="hero-button">Научете повече</button>
+        </div>
+      </section>
 
+      <h1>За паралелката</h1>
 
+    <div class="container">
+        <section class="activity-section">
+            <div class="activity-image" class="mySlides fade">
+                <img src="../images/first.jpg" alt="First" class="image-carousel">
+                <img src="../images/Second.jpg" alt="Second" class="image-carousel">
+                <img src="../images/Third.jpg" alt="Third" class="image-carousel">
+            </div>
+            <div class="activity-content">
+                <h2 class="activity-title">Какво ще научиш при нас?</h2>
+                <p class="activity-description">
+                    Нашата специалност е „Приложен програмист“ и цели да ви даде солидни знания и умения в съвременните технологии за разработка на софтуер. При нас ще се научите да:
+                    създавате уеб приложения (HTML, CSS, JavaScript, PHP, MySQL),
+                    мобилни приложения (Android, iOS),
+                    десктоп приложения (C#, Java, Python),
+                    работите с бази данни, алгоритми и структури от данни,
+                    използвате инструменти като Git, GitHub, Visual Studio, IntelliJ и Android Studio.
+                    развивате креативност, логическо мислене и работа в екип.
+                </p>
+            </div>
+        </section>
+        
+        <div class="divider"></div> 
+        
+        <section class="activity-section">
+            <div class="activity-image" class="image-carousel">
+                <img src="../images/Fourth.jpg" alt="Fouth" class="carousel-image">
+                <img src="../images/Fifth.jpg" alt="Fifth" class="carousel-image">
+                <img src="../images/Sixth.jpg" alt="Sixth" class="carousel-image">
+            </div>
+            <div class="activity-content">
+                <h2 class="activity-title">Защо тази паралелка е нашият (и твоя) избор?</h2>
+                <p class="activity-description">    
+                    В днешно време ИТ секторът е един от най-бързо развиващите се и перспективни в света. Избирайки „Приложен програмист“, вие получавате:
+                    възможност да развиете умения, търсени от работодателите,
+                    стабилна основа за професионално развитие и добра реализация,
+                    достъп до съвременни технологии и иновации,
+                    сигурен старт в един от най-желаните сектори.
+                    При нас ще откриете приятелска среда, мотивирани преподаватели и реални проекти, по които да работите, за да натрупате практически опит.
+                </p>
 
+            </div>
+        </section>
 
+        <div class="divider"></div> 
 
-
-
-
-
-
-
-
-
-
+        <section class="activity-section">
+            <div class="activity-image" class="image-carousel">
+                <img src="../images/Seventh.jpg" alt="Seventh" class="carousel-image">
+                <img src="../images/Eight.jpg" alt="Eight" class="carousel-image">
+                <img src="../images/Nineth.jpg" alt="Nineht" class="carousel-image">
+            </div>
+            <div class="activity-content">
+                <h2 class="activity-title">От ученик до успешен ИТ специалист!</h2>
+                <p class="activity-description">
+                    Завършилите паралелката „Приложен програмист“ имат множество възможности за реализация в ИТ сферата:
+                    Junior Developer във фирми за уеб и софтуерна разработка,
+                    QA (Quality Assurance) специалисти,
+                    IT поддръжка или системни администратори,
+                    фрилансъри, предлагащи услуги в глобални платформи.
+                    Продължаване на обучението в университети по ИТ специалности
+                </p>
+            </div>
+        </section>
+    </div> 
 
     <footer>
         <div class="footer-content">
@@ -158,7 +224,10 @@
         </div>
     </footer>
 
+    <script src="../js/about.js" defer></script>
+    <script src="../js/nevron.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/home.js" defer></script>
 
-    <script src="/js/main.js" defer></script>
 </body>
 </html>

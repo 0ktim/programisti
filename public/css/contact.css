@@ -113,11 +113,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .form-group label {
@@ -144,7 +143,7 @@
 .modern-form select:focus,
 .modern-form textarea:focus {
     border-color: #A855F7;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.15);
     outline: none;
 }
 
@@ -163,6 +162,7 @@
 
 textarea {
     resize: vertical;
+    height: 35vh;
 }
 
 /* Privacy Consent Styles */
