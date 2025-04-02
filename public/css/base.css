@@ -410,6 +410,8 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        justify-content: center;
+
     }
 
     .footer-section h4::after {
@@ -424,6 +426,35 @@ footer {
 
     .contact-info .info-item {
         justify-content: center;
+    }
+  
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0 auto; 
+        margin-left: 3rem ; 
+        padding: 0;
+        max-width: 300px; /* примерно */
+        text-align: left;
+    }
+      
+    .contact-info .info-item {
+        display: grid;
+        grid-template-columns: auto 1fr; 
+        gap: 1.5rem; 
+        align-items: flex-start; 
+        
+    }
+    .copyright{
+        font-size: 0.7rem;
+    }
+      
+    .footer-links-list{
+        margin: 0 auto; 
+        padding: 0;
+        max-width: 200px; /* примерно */
+        text-align: left;
     }
 
     .footer-links-list a:hover {
