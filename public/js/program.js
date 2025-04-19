@@ -2,59 +2,59 @@ const curriculum = {
     8: {
         'Български език и литература': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Английски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Математика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Информационни технологии': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'История и цивилизации': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'География и икономика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Философия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Биология и здравно образование': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физика и астрономия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Химия и опазване на околната среда': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Музика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Изобразително изкуство': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физическо възпитание и спорт': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Предприемачество': {
             description: '',
-            category: 'professional'
+            category: 'general-professional'
         }
     },
     9: {
@@ -72,55 +72,55 @@ const curriculum = {
         },
         'Информационни технологии': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Български език и литература': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Английски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Немски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Математика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'История и цивилизации': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'География и икономика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Философия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Биология и здравно образование': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физика и астрономия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Химия и опазване на околната среда': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Изобразително изкуство': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физическо възпитание и спорт': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Здравословни и безопасни условия на труд': {
             description: '',
@@ -134,55 +134,63 @@ const curriculum = {
         },
         'Програмиране на микроконтролери': {
             description: '',
-            category: 'professional'
+            category: 'advanced-professional'
         },
         'Информационни технологии': {
             description: '',
-            category: 'professional'
+            category: 'general'
+        },
+        'Производствена практика': {
+            description: '',
+            category: 'practice'
         },
         'Български език и литература': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Английски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Немски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Математика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'История и цивилизации': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'География и икономика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Философия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Биология и здравно образование': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физика и астрономия': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Химия и опазване на околната среда': {
             description: '',
-            category: 'general-education'
+            category: 'general'
+        },
+        'Икономика': {
+            description: '',
+            category: 'general-professional'
         },
         'Физическо възпитание и спорт': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         }
     },
     11: {
@@ -196,7 +204,7 @@ const curriculum = {
         },
         'Функционално програмиране': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Бази данни': {
             description: '',
@@ -204,23 +212,23 @@ const curriculum = {
         },
         'Програмиране за вградени системи': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Математически основи на програмирането': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Операционни системи': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Конкурентно програмиране': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Български език и литература': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Чужд език по професията': {
             description: '',
@@ -228,41 +236,41 @@ const curriculum = {
         },
         'Немски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Математика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Гражданско образование': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физическо възпитание и спорт': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         }
     },
     12: {
         'Алгоритми и структури от данни': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Функционално програмиране': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Интернет програмиране': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Софтуерно инженерство': {
             description: '',
-            category: 'advanced-professional'
+            category: 'specific-professional'
         },
         'Български език и литература': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Чужд език по професията': {
             description: '',
@@ -270,19 +278,19 @@ const curriculum = {
         },
         'Немски език': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Математика': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Гражданско образование': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         },
         'Физическо възпитание и спорт': {
             description: '',
-            category: 'general-education'
+            category: 'general'
         }
     }
 };
@@ -322,7 +330,9 @@ const subjectIcons = {
     'Здравословни и безопасни условия на труд': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/shield-check.svg',
     'Музика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/music-note.svg',
     'Изобразително изкуство': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/palette.svg',
-    'Информационни технологии': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/pc-display.svg'
+    'Информационни технологии': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/pc-display.svg',
+    'Производствена практика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/briefcase.svg',
+    'Икономика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/bar-chart.svg'
 };
 
 let currentGrade = null;
@@ -367,20 +377,28 @@ function showGrade(grade) {
         legend.className = 'legend';
         legend.innerHTML = `
             <div class="legend-item">
-                <div class="legend-color legend-general-education"></div>
-                <span>Общообразователна подготовка</span>
+                <div class="legend-color legend-professional"></div>
+                <span>Отраслова професионална подготовка</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-specific-professional"></div>
+                <span>Специфична професионална подготовка</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color legend-advanced-professional"></div>
+                <span>Разширена професионална подготовка</span>
             </div>
             <div class="legend-item">
                 <div class="legend-color legend-general-professional"></div>
                 <span>Обща професионална подготовка</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color legend-professional"></div>
-                <span>Отраслова професионална подготовка</span>
+                <div class="legend-color legend-practise"></div>
+                <span>Производствена практика</span>
             </div>
             <div class="legend-item">
-                <div class="legend-color legend-advanced-professional"></div>
-                <span>Разширена професионална подготовка</span>
+                <div class="legend-color legend-general"></div>
+                <span>Общообразователна подготовка</span>
             </div>
         `;
         subjectsDiv.appendChild(legend);
@@ -464,10 +482,12 @@ document.addEventListener('keydown', (e) => {
 // Функция, която превръща кода на категорията в текст за показване
 function getCategoryName(category) {
     const categoryNames = {
-        'general-education': 'Общообразователен',
-        'general-professional': 'Общопрофесионален',
-        'professional': 'Отраслово професионален',
-        'advanced-professional': 'Разширен професионален'
+        'professional': 'Отраслова професионална подготовка',
+        'specific-professional': 'Специфична професионална подготовка',
+        'advanced-professional': 'Разширена професионална подготовка',
+        'general-professional': 'Обща професионална подготовка',
+        'practice': 'Производствена практика',
+        'general': 'Общообразователна подготовка'
     };
     
     return categoryNames[category] || category;
