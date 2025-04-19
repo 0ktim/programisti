@@ -3,113 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СУ "Йордан Йовков" - Приложен програмист</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/social.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/scrollBar.css">
+    <meta name="description" content="Учебна програма за 8-12 клас в СУ Йордан Йовков - Сливен">
+    <title>Учебна програма | СУ Йордан Йовков</title>
+    <link rel="stylesheet" href="../css/program.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="СУ Йордан Йовков">
-
-        <div class="nav-toggle" onclick="toggleMenu()">
+        <img src="../images/logo.png" alt="СУ Йордан Йовков" class="logo">
+        <div class="nav-toggle" onclick="toggleMenu()" aria-label="Отвори меню">
             <span></span>
             <span></span>
             <span></span>
         </div>
-
         <nav>
             <ul>
-                <li><a href="#home">Начало</a></li>
+                <li><a href="../index.html">Начало</a></li>
                 <li><a href="">За паралелката</a></li>
                 <li>
-                    <a href="#program">Обучение</a>
+                    <a href="#program" aria-current="page">Обучение</a>
                     <ul>
-                        <li><a href="html/program.html">Учебна програма</a></li>
-                        <li><a href="html/extracurricular.html">Извънкласни дейности</a></li>
+                        <li><a href="program.html" class="active">Учебна програма</a></li>
+                        <li><a href="#extracurricular">Извънкласни дейности</a></li>
                     </ul>
                 </li>
-                <li><a href="html/projects.html">Проекти</a></li>
-                <li><a href="html/contact.html">Контакти</a></li>
+                <li><a href="#projects">Проекти</a></li>
+                <li><a href="contact.html">Контакти</a></li>
             </ul>
         </nav>
     </header>
 
-    <img class="banner-img" src="images/Banner2.png" alt="Програмиране">
-
-    <div id="spline-wrapper">
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"></script>
-        <spline-viewer events-target="global" id="robot-viewer" url="https://prod.spline.design/m6b73mxU2W0NUsSj/scene.splinecode"></spline-viewer>
-    </div>
-
-    <section class="section" id="about" style="backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.1); border-radius: 15px;">
-        <h1>При нас ще се научите да програмирате и разработвате:</h1>
-        <div class="icon-grid">
-            <div>
-                <img src="images/icon-web.png" alt="Уеб приложения">
-                <p>Уеб приложения</p>
-            </div>
-            <div>
-                <img src="images/icon-mobile.png" alt="Mобилни приложения">
-                <p>Мобилни приложения</p>
-            </div>
-            <div>
-                <img src="images/icon-programming.png" alt="Програмиране">
-                <p>Десктоп приложения</p>
-            </div>
-            <div>
-                <img src="images/icon-db.png" alt="Бази данни">
-                <p>Бази данни</p>
-            </div>
-            <div>
-                <img src="images/icon-ai.png" alt="Изкуствен интелект">
-                <p>Изкуствен интелект</p>
-            </div>
-        </div>
-    </section>
-    
-    <div class="slider-container">
-        <br>
-        <br>
-        <h2 class="slider-title">Какво казват за нас нашите ученици?
-        </h2>
-        <div class="slider">
-            <button class="nav-button prev-button">
-                <svg viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
-            </button>
-            
-            <div class="slider-content">
-                <div class="slides" id="slides"></div>
-            </div>
-
-            <button class="nav-button next-button">
-                <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
-            </button>
-        </div>
-        <div class="dots-container" id="dots"></div>
-    </div>
-
-    <section class="section" id="Career" >
-        <section class="banner">
-            <h2>Започни кариерата си в програмирането още като ученик!</h2>
-            <p>Нашата цел е да вдъхновим младите умове да преминат от консуматори на технологии към нейни създатели.</p>
-            
-            <a href="html\bal.html">
-                <button>Изчисли своя бал</button>
-            </a>
+    <main class="container">
+        <h1>Учебна програма</h1>
+        <nav class="buttons" aria-label="Избор на клас">
+            <button onclick="showGrade(8)" aria-label="Покажи програма за 8 клас">8 клас</button>
+            <button onclick="showGrade(9)" aria-label="Покажи програма за 9 клас">9 клас</button>
+            <button onclick="showGrade(10)" aria-label="Покажи програма за 10 клас">10 клас</button>
+            <button onclick="showGrade(11)" aria-label="Покажи програма за 11 клас">11 клас</button>
+            <button onclick="showGrade(12)" aria-label="Покажи програма за 12 клас">12 клас</button>
+        </nav>
+        <section id="curriculum" class="curriculum-content" aria-live="polite">
+            <h2 id="grade-title">Изберете клас</h2>
+            <div id="subjects" class="subjects-grid"></div>
         </section>
-    </section>
-
+    </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="СУ Йордан Йовков">
+                    <img src="../images/logo.png" alt="СУ Йордан Йовков">
                 </div>
                 <p class="school-description"><b>СУ "Йордан Йовков" - Сливен</b> <br> От първия ред код до първата иновация – твоята история започва тук!</b></p>
             </div>
@@ -209,11 +154,16 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/main.js" defer></script>
-    <script src="js/home.js" defer></script>
-    <script src="js/robot.js" defer></script>
-    <script src="js/testimonials.js" defer></script>
-    <script src="js/robot.js" defer></script>
+    <script src="../js/program.js"></script>
+    <script>
+        // Добавяме анимация при зареждане на страницата
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.container').style.opacity = '0';
+            setTimeout(() => {
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.container').style.transition = 'opacity 0.5s ease';
+            }, 100);
+        });
+    </script>
 </body>
-</html>
+</html> 
