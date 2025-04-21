@@ -339,7 +339,17 @@ let currentGrade = null;
 let isAnimating = false;
 
 function showGrade(grade) {
-    if (currentGrade === grade || isAnimating) return;
+    // Проверка дали вече не показваме този клас
+    if (currentGrade === grade) return;
+    
+    // Проверка дали в момента не тече анимация
+    if (isAnimating) {
+        // Важно: Спираме всички текущи setTimeout операции, които са свързани с анимацията
+        clearTimeout(window.animationTimeout);
+        clearTimeout(window.contentTimeout);
+        isAnimating = false;
+    }
+    
     isAnimating = true;
     
     const gradeTitle = document.getElementById('grade-title');
@@ -354,7 +364,8 @@ function showGrade(grade) {
     void gradeTitle.offsetWidth; // Форсираме reflow
     gradeTitle.classList.add('animate');
     
-    setTimeout(() => {
+    // Използваме именувани setTimeout за да можем да ги премахваме при нужда
+    window.contentTimeout = setTimeout(() => {
         gradeTitle.textContent = `${grade} клас`;
         subjectsDiv.innerHTML = '';
 
@@ -405,19 +416,22 @@ function showGrade(grade) {
         `;
         
         // Добавяме стил за организация по две на ред
-        const legendStyle = document.createElement('style');
-        legendStyle.textContent = `
-            .legend {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            .legend-item {
-                width: 40%;
-                box-sizing: border-box;
-                padding-right: 10px;
-            }
-        `;
-        document.head.appendChild(legendStyle);
+        if (!document.getElementById('legend-style')) {
+            const legendStyle = document.createElement('style');
+            legendStyle.id = 'legend-style';
+            legendStyle.textContent = `
+                .legend {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .legend-item {
+                    width: 40%;
+                    box-sizing: border-box;
+                    padding-right: 10px;
+                }
+            `;
+            document.head.appendChild(legendStyle);
+        }
         
         subjectsDiv.appendChild(legend);
 
@@ -446,6 +460,7 @@ function showGrade(grade) {
         });
         
         let delay = 0;
+        let pendingAnimations = 0;
 
         for (const [subject, data] of sortedSubjects) {
             const subjectElement = document.createElement('div');
@@ -470,14 +485,21 @@ function showGrade(grade) {
             `;
             
             gridContainer.appendChild(subjectElement);
-            delay += 0.1;
+            delay += 0.05; // Намаляваме времето за закъснение за да е по-бърза анимацията
             
             // Форсираме reflow за анимацията
             subjectElement.offsetHeight;
             
+            pendingAnimations++;
             setTimeout(() => {
                 subjectElement.style.opacity = '1';
                 subjectElement.style.transform = 'translateY(0)';
+                pendingAnimations--;
+                
+                // Последна анимация приключи
+                if (pendingAnimations === 0) {
+                    isAnimating = false;
+                }
             }, 50);
         }
         
@@ -485,9 +507,10 @@ function showGrade(grade) {
         subjectsDiv.style.opacity = '1';
         subjectsDiv.style.transform = 'translateY(0)';
         
-        setTimeout(() => {
+        // Задаваме резервен таймер, който да освободи флага isAnimating, в случай че нещо се обърка
+        window.animationTimeout = setTimeout(() => {
             isAnimating = false;
-        }, delay * 1000 + 500);
+        }, Math.max(500, delay * 1000 + 200));
     }, 300);
 
     // Активен бутон с плавна анимация
@@ -556,13 +579,14 @@ document.head.appendChild(iconStyles);
     iconLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css';
     document.head.appendChild(iconLink);
     
-    // Добавяме клас за активен бутон при клик
     document.querySelectorAll('.buttons button').forEach(button => {
+        // Премахваме стария event listener, ако има такъв
+        button.onclick = null;
+        
+        // Добавяме нов event listener
         button.addEventListener('click', function() {
-            if (!isAnimating) {
-                const grade = parseInt(this.textContent);
-                showGrade(grade);
-            }
+            const grade = parseInt(this.textContent);
+            showGrade(grade);
         });
     });
 
