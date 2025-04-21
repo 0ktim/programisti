@@ -1,5 +1,11 @@
 // Initialize Google Map
 function initMap() {
+    // Проверяваме дали Google Maps API е зареден и дали map елементът съществува
+    if (typeof google === 'undefined' || !document.getElementById('map')) {
+        console.log('Google Maps API не е зареден или map елементът липсва');
+        return;
+    }
+
     // Coordinates for СУ "Йордан Йовков" в Сливен (approximate location in ж.к. Българка)
     const school = { lat: 42.6978, lng: 26.3216 };
 

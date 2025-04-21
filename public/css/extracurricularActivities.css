@@ -1,10 +1,486 @@
-h1{
-    font-size: 4rem;
-    margin-top: 5rem;
+/* Hero Coding Section */
+.hero-coding {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(135deg, #1a103577 0%, #1b255977 50%, #044f9477 100%);
+}
+
+/* Particle canvas */
+#particle-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: auto;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 5;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-title, .hero-subtitle {
+    position: relative;
+    z-index: 6;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тъмна сянка за по-добър контраст */
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(116, 79, 255, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Code Editor */
+.code-container {
+    position: relative;
+    z-index: 4;
+    width: 70%;
+    max-width: 900px;
+    height: 35vh;
+    margin: 0 auto;
+}
+
+.code-editor {
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 30, 40, 0.8); /* По-тъмен фон за по-добър контраст */
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: perspective(1500px) rotateY(-5deg) rotateX(2deg);
+    transition: all 0.5s ease;
+    animation: floating 8s ease-in-out infinite;
+    pointer-events: auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.code-editor:hover {
+    transform: perspective(1500px) rotateY(0deg) rotateX(0deg) scale(1.02);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.code-editor-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(20, 20, 30, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-dots {
+    display: flex;
+    gap: 6px;
+    margin-right: 15px;
+}
+
+.code-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.code-dots span:nth-child(1) {
+    background-color: #ff5f57;
+}
+
+.code-dots span:nth-child(2) {
+    background-color: #febc2e;
+}
+
+.code-dots span:nth-child(3) {
+    background-color: #28c840;
+}
+
+.code-title {
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.code-content {
+    padding: 10px;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    overflow: auto;              /* Позволява скролиране */
+    scrollbar-width: none;       /* Скрива скролбара във Firefox */
+    -ms-overflow-style: none;    /* Скрива скролбара в Internet Explorer 10+ */
+}
+.code-content::-webkit-scrollbar {
+        display: none;               /* Скрива скролбара в Chrome, Safari и Opera */
+      }
+
+.code-content pre {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.code-content code {
+    display: block;
+}
+
+/* Syntax Highlighting */
+.code-comment {
+    color: #6d7a96;
+}
+
+.code-keyword {
+    color: #c678dd;
+}
+
+.code-string {
+    color: #98c379;
+}
+
+.code-number {
+    color: #d19a66;
+}
+
+.code-class {
+    color: #61afef;
+}
+
+.code-this {
+    color: #e06c75;
+}
+
+/* Стилове за иконките под конзолата */
+.hero-icons-container {
+    position: relative;
+    z-index: 6;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.hero-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-icon i {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(164, 79, 255, 0.1); /* По-тъмен фон за по-добър контраст */
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(116, 79, 255, 0.4);
+}
+
+.hero-icon span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); /* Добавяне на сянка за по-добър контраст */
+}
+
+.hero-icon:hover i {
+    transform: translateY(-5px);
+    background: rgba(116, 79, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(121, 84, 255, 0.8);
+}
+
+/* Scroll Indicator - преместен извън hero секцията */
+/* Контейнерът на стрелката */
+.scroll-indicator-container {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column; /* подреждане по колоните (вертикално) */
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+/* Самата стрелка */
+.scroll-indicator {
+    position: static; /* вече не е абсолютно */
+    margin: 0;       /* auto не е нужно, щом вече е във flex + center */
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: transparent;
+    opacity: 0.8;
+}
+
+/* Hover - ако искате някакъв ефект */
+.scroll-indicator:hover {
+    opacity: 1;
+    color: rgba(255, 255, 255);
 
 }
+
+/* Анимация на иконката */
+.scroll-indicator i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    animation: bounceArrow 2s infinite; /* Ако имате такава keyframe анимация */
+}
+
+/* Текстът до/под иконката */
+.scroll-text {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+.scroll-text:hover {
+    color: rgba(255, 255, 255);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* Floating 3D Objects */
+.floating-objects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.floating-object {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+    cursor: move;
+    transition: all 0.3s ease;
+}
+
+#cube {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    right: 15%;
+    animation: floatingObject 8s ease-in-out infinite, rotateObject 15s linear infinite;
+}
+
+#sphere {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    bottom: 25%;
+    left: 20%;
+    animation: floatingObject 6s ease-in-out infinite, pulseObject 8s ease-in-out infinite;
+}
+
+#pyramid {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86.6px solid rgba(255, 255, 255, 0.05);
+    background: none;
+    top: 35%;
+    left: 15%;
+    animation: floatingObject 10s ease-in-out infinite, rotateObject 20s linear infinite;
+}
+
+/* Animations */
+@keyframes floating {
+    0%, 100% {
+        transform: perspective(1500px) rotateY(-5deg) rotateX(2deg) translateY(0);
+    }
+    50% {
+        transform: perspective(1500px) rotateY(-5deg) rotateX(2deg) translateY(-15px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(116, 79, 255, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(116, 79, 255, 0.9), 0 0 30px rgba(116, 79, 255, 0.5);
+    }
+}
+
+@keyframes bounceArrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes floatingObject {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotateObject {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseObject {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-coding {
+        height: auto;
+        min-height: 85vh;
+        padding: 30px 0;
+    }
+    
+    .hero-title {
+        margin-top: 0;
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .code-container {
+        width: 90%;
+        height: 40vh;
+        margin-bottom: 20px;
+    }
+    
+    .code-editor {
+        transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+    
+    .code-content {
+        font-size: 8px;
+    }
+    
+    .code-content pre {
+        font-size: 8px;
+    }
+    
+    .hero-icons {
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+    }
+
+    
+    .hero-icon i {
+        font-size: 1.7em;
+        width: 50px;
+        height: 50px;
+    }
+    .hero-icon span{
+        font-size: 1rem;
+    }
+    
+    .floating-objects {
+        display: none; /* Скриваме 3D обектите на мобилни устройства */
+    }
+}
+
+@media (max-width: 360px) {
+    *{
+        box-sizing: border-box;
+
+    }
+    .hero-icons {
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .hero-icon i {
+        font-size: 1.5rem;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .hero-icon span {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Original CSS below */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,7 +496,7 @@ h1{
     align-items: center;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 1s ease, transform 1s ease;
     margin-bottom: 60px;
     padding: 30px;
     border-radius: 10px;
@@ -35,18 +511,20 @@ h1{
 
 .activity-section > * {
     direction: ltr;
+    position: relative;
+    z-index: 1;
 }
 
 /* Секции, които ще се появяват от лявата страна */
-.activity-section[data-section="1"],
-.activity-section[data-section="3"] {
-    transform: translateX(-100px);
+.activity-section[data-section="Arduino Club"],
+.activity-section[data-section="Theatre Club One"] {
+    transform: translateX(100px);
 }
 
 /* Секции, които ще се появяват от дясната страна */
-.activity-section[data-section="2"],
-.activity-section[data-section="4"] {
-    transform: translateX(100px);
+.activity-section[data-section="Club AI"],
+.activity-section[data-section="Theatre Club Two"] {
+    transform: translateX(-100px);
 }
 
 /* Клас за анимиране при появяване в зрителното поле */
@@ -56,32 +534,45 @@ h1{
 }
 
 .activity-image {
-    width: 85%;
-    aspect-ratio: 1;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    flex: 0 0 40%;
-    margin-right: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(5deg);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .activity-section:nth-child(even) .activity-image {
-    margin-right: 0;
-    margin-left: 30px;
+    transform: perspective(1000px) rotateY(5deg);
+}
+
+.activity-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(116, 79, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.activity-section:hover .activity-image {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(116, 79, 255, 0.2);
 }
 
 .activity-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    height: auto;
-    transition: transform 0.5s ease;
-    filter: contrast(1.05);
+    transition: transform 0.8s ease;
+    filter: contrast(1.05) brightness(1.05);
 }
 
-.activity-image img:hover {
-    transform: scale(1.20);
+.activity-image:hover img {
+    transform: scale(1.1);
 }
 
 .activity-content {
@@ -90,28 +581,48 @@ h1{
 }
 
 .activity-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
     position: relative;
-    padding-bottom: 1rem;
-    border-bottom: 4px solid #ffffff;
+    padding-bottom: 0.8rem;
     display: inline-block;
-    margin-bottom: 15px;
     color: #ffffff;
-    font-size: 30px;
-    -webkit-text-stroke: 0.5px white;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
-    transition: color 0.3s ease;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px rgba(116, 79, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.activity-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(116, 79, 255, 0.8), rgba(116, 79, 255, 0.3));
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.activity-section:hover .activity-title::after {
+    width: 100%;
 }
 
 .activity-description {
-    line-height: 1.6;
-    font-size: 17.5px;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.activity-section:hover .activity-description {
+    transform: translateY(-5px);
 }
 
 /* Стилове за специфични секции по номер */
-.activity-section[data-section="1"] {
+.activity-section[data-section="Arduino Club"] {
     background-color: rgba(3, 127, 96, 0.247);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -119,12 +630,12 @@ h1{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.activity-section[data-section="1"] .activity-description {
+.activity-section[data-section="Arduino Club"] .activity-description {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     font-weight: 400;
 }
 
-.activity-section[data-section="2"] {
+.activity-section[data-section="Club AI"] {
     background-color: rgba(2, 44, 96, 0.216);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -132,12 +643,12 @@ h1{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.activity-section[data-section="2"] .activity-description {
+.activity-section[data-section="Club AI"] .activity-description {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     font-weight: 400;
 }
 
-.activity-section[data-section="3"] {
+.activity-section[data-section="Theatre Club One"] {
     background-color: rgba(9, 172, 193, 0.178);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -145,12 +656,12 @@ h1{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.activity-section[data-section="3"] .activity-description {
+.activity-section[data-section="Theatre Club One"] .activity-description {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     font-weight: 400;
 }
 
-.activity-section[data-section="4"] {
+.activity-section[data-section="Theatre Club Two"] {
     background-color: rgba(141, 165, 1, 0.167);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -158,50 +669,58 @@ h1{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.activity-section[data-section="4"] .activity-description {
+.activity-section[data-section="Theatre Club Two"] .activity-description {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     font-weight: 400;
 }
 
-
 /* Mobile responsive - portrait */
 @media screen and (max-width: 768px) {
-
-    h1{
+    h1 {
         font-size: 2rem;
     }
-
+    
     .activity-section {
         grid-template-columns: 1fr;
         gap: 2rem;
         margin: 3rem 0;
+        padding: 25px;
+        border-radius: 12px;
     }
     
     .activity-section:nth-child(even) {
         direction: ltr;
     }
     
+    .activity-image {
+        transform: perspective(1000px) rotateY(0deg) !important;
+        margin-bottom: 1.5rem;
+    }
+    
     .activity-content {
-        padding: 1rem 0;
+        padding: 0;
     }
     
     .activity-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
     
-    .activity-image {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        margin-right: 0;
-    }
-    
-    .activity-section:nth-child(even) .activity-image {
-        margin-left: 0;
+    .activity-description {
+        font-size: 1rem;
     }
     
     .container {
         padding: 1rem;
+    }
+    
+    .activity-section[data-section="Arduino Club"],
+    .activity-section[data-section="Club AI"],
+    .activity-section[data-section="Theatre Club One"],
+    .activity-section[data-section="Theatre Club Two"] {
+        border-left: none;
+        border-right: none;
+        border-top: 3px solid rgba(116, 79, 255, 0.5);
     }
 }
 
@@ -211,8 +730,9 @@ h1{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        gap: 1rem;
+        gap: 1.5rem;
         align-items: center;
+        padding: 20px;
     }
     
     .activity-section:nth-child(odd) {
@@ -237,18 +757,14 @@ h1{
     }
     
     .activity-section:nth-child(even) .activity-content {
-        text-align: left; /* Променено от right на left */
+        text-align: left;
     }
     
     .activity-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .activity-description {
-        font-size: 0.85rem;
-    }
-    
-    body {
-        padding-bottom: 60px;
+        font-size: 0.95rem;
     }
 }

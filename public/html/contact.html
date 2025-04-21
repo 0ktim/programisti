@@ -10,35 +10,10 @@
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/scrollBar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY" defer></script>
 </head>
 <body>
-    <header>
-        <img src="../images/logo.png" alt="СУ Йордан Йовков">
-
-        <div class="nav-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html">Начало</a></li>
-                <li><a href="about.html">За паралелката</a></li>
-
-                <li>
-                    <a href="#program">Обучение</a>
-                    <ul>
-                        <li><a href="#">Учебна програма</a></li>
-                        <li><a href="extracurricular.html">Извънкласни дейности</a></li>
-                    </ul>
-                </li>
-                <li><a href="projects.html">Проекти</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Контейнер за хедъра -->
+    <div id="header-container"></div>
 
     <main class="contact-page">
         <div class="container">
@@ -180,116 +155,14 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <img src="../images/logo.png" alt="СУ Йордан Йовков">
-                </div>
-                <p class="school-description"><b>СУ "Йордан Йовков" - Сливен</b> <br> От първия ред код до първата иновация – твоята история започва тук!</b></p>
-            </div>
-
-            <div class="footer-section">
-                <h4>Полезни връзки</h4>
-                <ul class="footer-links-list">
-                    <li><a href="../index.html">Начало</a></li>
-                    <li><a href="..//html/about.html">За паралелката</a></li>
-                    <li><a href="">Учебна програма</a></li>
-                    <li><a href="../html/extracurricular.html">Извънкласни дейности</a>
-                    <li><a href="../html/projects.html">Проекти</a>
-                    <li><a href="../html/bal.html">Калкулатор за бал</a></li>
-                    <li><a href="">Често задавани въпроси</a></li>
-                    <li><a href="../html/contact.html">Контакти</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Контакти</h4>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <p>Телефони:</p>
-                            <a href="tel:+35944667244" class="contact-link">Директор: 044/ 66 72 44</a>
-                            <a href="tel:+35944667684" class="contact-link">Зам. директор: 044/ 66 76 84</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <p>Работно време:</p>
-                            <p>8:00 - 17:00</p>
-                            <small>Понеделник - Петък</small>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <a href="https://maps.google.com/?q=СУ+Йордан+Йовков+Сливен" target="_blank" class="contact-link">
-                                <p>Адрес:</p>
-                                <p>ж.к. Българка</p>
-                                <p>8800 Сливен</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <a href="mailto:info-2000114@edu.mon.bg" class="contact-link">info-2000114@edu.mon.bg</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-section social-section">
-                <h4>Последвайте ни</h4>
-                <div class="social-links" style="display: flex;">
-                    <a href="https://www.facebook.com/SUYordanYovkov" class="social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener">
-                        <div class="icon-wrapper">
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                        <span class="social-label">Facebook</span>
-                    </a>
-                    <a href="https://www.tiktok.com/@x_su_sliven" class="social-icon tiktok" aria-label="TikTok" target="_blank" rel="noopener">
-                        <div class="icon-wrapper">
-                            <i class="fab fa-tiktok"></i>
-                        </div>
-                        <span class="social-label">TikTok</span>
-                    </a>
-                    <a href="https://www.youtube.com/@%D0%A1%D0%A3%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%D0%99%D0%BE%D0%B2%D0%BA%D0%BE%D0%B2" class="social-icon youtube" aria-label="YouTube" target="_blank" rel="noopener">
-                        <div class="icon-wrapper">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <span class="social-label">YouTube</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-legal">
-                <nav class="legal-links">
-                    <a href="../html/privacy-policy.html">
-                        <i class="fas fa-shield-alt"></i>
-                        Политика за поверителност
-                    </a>
-                    <span class="separator">•</span>
-                    <a href="../html/terms.html">
-                        <i class="fas fa-gavel"></i>
-                        Условия за ползване
-                    </a>
-                </nav>
-                <div class="copyright">
-                    <i class="far fa-copyright"></i>
-                    <span>2025 СУ "Йордан Йовков" – Сливен. Всички права запазени.</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Контейнер за футъра -->
+    <div id="footer-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="../js/form.js" defer></script>
+    <!-- Добавяме скрипта за общите компоненти пръв -->
+    <script src="../js/common.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/form.js" defer></script>
+    <script src="../js/contact.js" defer></script>
 </body>
 </html>
