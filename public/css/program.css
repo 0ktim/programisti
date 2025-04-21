@@ -29,7 +29,7 @@ h1::after {
 
 /* Стилове за бутоните */
 .buttons {
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -107,7 +107,7 @@ h1::after {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 25px;
-    max-width: 800px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -284,37 +284,37 @@ h1::after {
 }
 
 .professional {
-    background-color: rgba(240, 45, 71, 0.15);  /* Тюркоазено ООП*/ 
+    background-color: rgba(240, 45, 71, 0.15);  /* Червено */ 
     color: #fdbec3;
     border: 1px solid rgba(245, 19, 49, 0.3);
 }
 
 .specific-professional {
-    background-color: rgba(216, 236, 37, 0.514);  /* Лилаво ОПП*/
-    color: lch(97.32% 43.83 113.46);
+    background-color: rgba(216, 236, 37, 0.329);  /* Зелено СПП*/
+    color: lch(97.32% 43.83 113.46 / 0.788);
     border: 1px solid rgba(221, 240, 50, 0.3);
 }
 
 .advanced-professional {
-    background-color: rgba(229, 233, 0, 0.226);  /* Червеникаво ПП*/
+    background-color: rgba(229, 233, 0, 0.226);  /* Жълто РПП*/
     color: #fffd9ee5;
     border: 1px solid rgba(228, 255, 109, 0.3);
 }
 
 .general-professional {
-    background-color: rgba(211, 148, 66, 0.349);  /* Зелено РПП*/
+    background-color: rgba(211, 148, 66, 0.349);  /* Оранжево ОПП*/
     color: #ffef93a1;
     border: 1px solid rgba(223, 150, 91, 0.548);
 }
 
 .practice {
-    background-color: rgba(0, 49, 105, 0.171);  /* Зелено РПП*/
+    background-color: rgba(0, 49, 105, 0.171);  /* Син ПП*/
     color: #a8d1ff;
     border: 1px solid rgba(119, 235, 255, 0.548);
 }
 
 .general {
-    background-color: rgba(100, 19, 192, 0.171);  /* Зелено РПП*/
+    background-color: rgba(100, 19, 192, 0.171);  /* Лилав ООП*/
     color: #e0cdffd8;
     border: 1px solid rgba(218, 163, 255, 0.548);
 }

@@ -375,6 +375,8 @@ function showGrade(grade) {
         // Създаваме легенда за видовете предмети
         const legend = document.createElement('div');
         legend.className = 'legend';
+        
+        // Организираме легендата по две категории на ред
         legend.innerHTML = `
             <div class="legend-item">
                 <div class="legend-color legend-professional"></div>
@@ -401,6 +403,22 @@ function showGrade(grade) {
                 <span>Общообразователна подготовка</span>
             </div>
         `;
+        
+        // Добавяме стил за организация по две на ред
+        const legendStyle = document.createElement('style');
+        legendStyle.textContent = `
+            .legend {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .legend-item {
+                width: 40%;
+                box-sizing: border-box;
+                padding-right: 10px;
+            }
+        `;
+        document.head.appendChild(legendStyle);
+        
         subjectsDiv.appendChild(legend);
 
         // Създаваме контейнер за подредба
@@ -408,8 +426,25 @@ function showGrade(grade) {
         gridContainer.className = 'subjects-grid';
         subjectsDiv.appendChild(gridContainer);
 
-        // Сортираме предметите по азбучен ред
-        const sortedSubjects = Object.entries(subjects);
+        // Дефинираме реда на категориите
+        const categoryOrder = {
+            'professional': 1,
+            'specific-professional': 2,
+            'advanced-professional': 3,
+            'general-professional': 4,
+            'practice': 5,
+            'general': 6
+        };
+
+        // Сортираме предметите само според категориите
+        const sortedSubjects = Object.entries(subjects).sort((a, b) => {
+            const categoryA = a[1].category;
+            const categoryB = b[1].category;
+            
+            // Сортиране само по категория
+            return categoryOrder[categoryA] - categoryOrder[categoryB];
+        });
+        
         let delay = 0;
 
         for (const [subject, data] of sortedSubjects) {
