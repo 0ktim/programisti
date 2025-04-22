@@ -1,295 +1,307 @@
 const curriculum = {
     8: {
+        'Информационни технологии ': {
+            description: 'Теория: 36, Практика: 18',
+            category: 'advanced-professional'
+        },
+        'Предприемачество': {
+            description: '36',
+            category: 'general-professional'
+        },
         'Български език и литература': {
-            description: '',
+            description: '144 ',
             category: 'general'
         },
         'Английски език': {
-            description: '',
+            description: '432',
             category: 'general'
         },
         'Математика': {
-            description: '',
+            description: '108',
             category: 'general'
         },
         'Информационни технологии': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'История и цивилизации': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'География и икономика': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Философия': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Биология и здравно образование': {
-            description: '',
+            description: '54',
             category: 'general'
         },
         'Физика и астрономия': {
-            description: '',
+            description: '54',
             category: 'general'
         },
         'Химия и опазване на околната среда': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Музика': {
-            description: '',
+            description: '18',
             category: 'general'
         },
         'Изобразително изкуство': {
-            description: '',
+            description: '18',
             category: 'general'
         },
         'Физическо възпитание и спорт': {
-            description: '',
+            description: '72',
             category: 'general'
-        },
-        'Предприемачество': {
-            description: '',
-            category: 'general-professional'
         }
     },
     9: {
         'Увод в програмирането': {
-            description: '',
+            description: 'Теория: 18, Практика: 36',
             category: 'professional'
         },
         'Програмиране': {
-            description: '',
+            description: 'Теория: 36, Практика: 36',
             category: 'professional'
         },
         'Увод в обектно-ориентираното програмиране': {
-            description: '',
+            description: 'Теория: 18, Практика: 18',
             category: 'professional'
         },
-        'Информационни технологии': {
-            description: '',
-            category: 'general'
+        'Здравословни и безопасни условия на труд': {
+            description: '18',
+            category: 'general-professional'
         },
         'Български език и литература': {
-            description: '',
+            description: '108',
             category: 'general'
         },
         'Английски език': {
-            description: '',
+            description: '216',
             category: 'general'
         },
         'Немски език': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Математика': {
-            description: '',
+            description: '108',
+            category: 'general'
+        },        
+        'Информационни технологии': {
+            description: '36',
             category: 'general'
         },
         'История и цивилизации': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'География и икономика': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Философия': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Биология и здравно образование': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Физика и астрономия': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Химия и опазване на околната среда': {
-            description: '',
+            description: '54',
             category: 'general'
         },
         'Изобразително изкуство': {
-            description: '',
+            description: '18',
             category: 'general'
         },
         'Физическо възпитание и спорт': {
-            description: '',
+            description: '72',
             category: 'general'
-        },
-        'Здравословни и безопасни условия на труд': {
-            description: '',
-            category: 'general-professional'
         }
     },
     10: {
         'Увод в алгоритмите и структурите от данни': {
-            description: '',
+            description: 'Теория: 36, Практика: 36',
             category: 'professional'
         },
         'Програмиране на микроконтролери': {
             description: '',
             category: 'advanced-professional'
         },
-        'Информационни технологии': {
+        'Визуално програмиране': {
             description: '',
-            category: 'general'
+            category: 'advanced-professional'
+        },
+        'Икономика': {
+            description: '36',
+            category: 'general-professional'
         },
         'Производствена практика': {
-            description: '',
+            description: '64',
             category: 'practice'
         },
         'Български език и литература': {
-            description: '',
+            description: '108',
             category: 'general'
         },
         'Английски език': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Немски език': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Математика': {
-            description: '',
+            description: '72',
+            category: 'general'
+        },
+        'Информационни технологии': {
+            description: '18',
             category: 'general'
         },
         'История и цивилизации': {
-            description: '',
+            description: '126',
             category: 'general'
         },
         'География и икономика': {
-            description: '',
+            description: '90',
             category: 'general'
         },
         'Философия': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Биология и здравно образование': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Физика и астрономия': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Химия и опазване на околната среда': {
-            description: '',
+            description: '72',
             category: 'general'
         },
-        'Икономика': {
-            description: '',
-            category: 'general-professional'
-        },
         'Физическо възпитание и спорт': {
-            description: '',
+            description: '72',
             category: 'general'
         }
     },
     11: {
         'Обектно-ориентирано програмиране': {
-            description: '',
+            description: 'Теория: 72, Практика: 72',
+            category: 'professional'
+        },
+        'Бази данни': {
+            description: 'Теория: 36, Практика: 36',
             category: 'professional'
         },
         'Разработка на софтуер': {
-            description: '',
-            category: 'professional'
-        },
-        'Функционално програмиране': {
-            description: '',
-            category: 'specific-professional'
-        },
-        'Бази данни': {
-            description: '',
+            description: 'Теория: 72, Практика: 90',
             category: 'professional'
         },
         'Програмиране за вградени системи': {
-            description: '',
+            description: 'Теория: 36, Практика: 36',
             category: 'specific-professional'
         },
         'Математически основи на програмирането': {
-            description: '',
+            description: 'Теория: 36, Практика: 36',
             category: 'specific-professional'
         },
         'Операционни системи': {
-            description: '',
+            description: 'Теория: 36, Практика: 36',
             category: 'specific-professional'
         },
         'Конкурентно програмиране': {
-            description: '',
+            description: 'Теория: 18, Практика: 36',
             category: 'specific-professional'
         },
-        'Български език и литература': {
-            description: '',
-            category: 'general'
-        },
         'Чужд език по професията': {
-            description: '',
+            description: 'Теория: 72, Практика: 0',
             category: 'general-professional'
         },
+        'Производствена практика': {
+            description: '64',
+            category: 'practice'
+        },
+        'Български език и литература': {
+            description: '108',
+            category: 'general'
+        },
         'Немски език': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Математика': {
-            description: '',
+            description: '72',
             category: 'general'
         },
         'Гражданско образование': {
-            description: '',
+            description: '36',
             category: 'general'
         },
         'Физическо възпитание и спорт': {
-            description: '',
+            description: '72',
             category: 'general'
         }
     },
     12: {
         'Алгоритми и структури от данни': {
-            description: '',
+            description: 'Теория: 58, Практика: 87',
             category: 'specific-professional'
         },
         'Функционално програмиране': {
-            description: '',
+            description: 'Теория: 29, Практика: 29',
             category: 'specific-professional'
         },
         'Интернет програмиране': {
-            description: '',
+            description: 'Теория: 58, Практика: 116',
             category: 'specific-professional'
         },
         'Софтуерно инженерство': {
-            description: '',
+            description: 'Теория: 58, Практика: 87',
             category: 'specific-professional'
         },
-        'Български език и литература': {
-            description: '',
-            category: 'general'
-        },
         'Чужд език по професията': {
-            description: '',
+            description: 'Теория: 58, Практика: 0',
             category: 'general-professional'
         },
+        'Производствена практика': {
+            description: '64',
+            category: 'practice'
+        },
+        'Български език и литература': {
+            description: '87',
+            category: 'general'
+        },
         'Немски език': {
-            description: '',
+            description: '58',
             category: 'general'
         },
         'Математика': {
-            description: '',
+            description: '58',
             category: 'general'
         },
         'Гражданско образование': {
-            description: '',
+            description: '29',
             category: 'general'
         },
         'Физическо възпитание и спорт': {
-            description: '',
+            description: '58',
             category: 'general'
         }
     }
@@ -329,213 +341,121 @@ const subjectIcons = {
     'Предприемачество': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/briefcase.svg',
     'Здравословни и безопасни условия на труд': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/shield-check.svg',
     'Музика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/music-note.svg',
-    'Изобразително изкуство': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/palette.svg',
     'Информационни технологии': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/pc-display.svg',
+    'Изобразително изкуство': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/palette.svg',    
+    'Информационни технологии': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/pc-display.svg',
+    'Информационни технологии ': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/pc-display.svg',
     'Производствена практика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/briefcase.svg',
     'Икономика': 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/bar-chart.svg'
 };
 
 let currentGrade = null;
-let isAnimating = false;
+let activeTimeouts = [];
 
-function showGrade(grade) {
-    // Проверка дали вече не показваме този клас
-    if (currentGrade === grade) return;
-    
-    // Проверка дали в момента не тече анимация
-    if (isAnimating) {
-        // Важно: Спираме всички текущи setTimeout операции, които са свързани с анимацията
-        clearTimeout(window.animationTimeout);
-        clearTimeout(window.contentTimeout);
-        isAnimating = false;
-    }
-    
-    isAnimating = true;
-    
-    const gradeTitle = document.getElementById('grade-title');
-    const subjectsDiv = document.getElementById('subjects');
-    
-    // Анимация за изчезване
-    subjectsDiv.style.opacity = '0';
-    subjectsDiv.style.transform = 'translateY(-20px)';
-    
-    // Анимация за заглавието
-    gradeTitle.classList.remove('animate');
-    void gradeTitle.offsetWidth; // Форсираме reflow
-    gradeTitle.classList.add('animate');
-    
-    // Използваме именувани setTimeout за да можем да ги премахваме при нужда
-    window.contentTimeout = setTimeout(() => {
-        gradeTitle.textContent = `${grade} клас`;
-        subjectsDiv.innerHTML = '';
-
-        const subjects = curriculum[grade];
-        
-        // Проверка за празни данни
-        if (!subjects || Object.keys(subjects).length === 0) {
-            const emptyMessage = document.createElement('div');
-            emptyMessage.className = 'empty-message';
-            emptyMessage.textContent = 'Информацията за този клас скоро ще бъде добавена.';
-            subjectsDiv.appendChild(emptyMessage);
-            subjectsDiv.style.opacity = '1';
-            subjectsDiv.style.transform = 'translateY(0)';
-            isAnimating = false;
-            return;
-        }
-
-        // Създаваме легенда за видовете предмети
-        const legend = document.createElement('div');
-        legend.className = 'legend';
-        
-        // Организираме легендата по две категории на ред
-        legend.innerHTML = `
-            <div class="legend-item">
-                <div class="legend-color legend-professional"></div>
-                <span>Отраслова професионална подготовка</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-specific-professional"></div>
-                <span>Специфична професионална подготовка</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-advanced-professional"></div>
-                <span>Разширена професионална подготовка</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-general-professional"></div>
-                <span>Обща професионална подготовка</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-practise"></div>
-                <span>Производствена практика</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-general"></div>
-                <span>Общообразователна подготовка</span>
-            </div>
-        `;
-        
-        // Добавяме стил за организация по две на ред
-        if (!document.getElementById('legend-style')) {
-            const legendStyle = document.createElement('style');
-            legendStyle.id = 'legend-style';
-            legendStyle.textContent = `
-                .legend {
-                    display: flex;
-                    flex-wrap: wrap;
-                }
-                .legend-item {
-                    width: 40%;
-                    box-sizing: border-box;
-                    padding-right: 10px;
-                }
-            `;
-            document.head.appendChild(legendStyle);
-        }
-        
-        subjectsDiv.appendChild(legend);
-
-        // Създаваме контейнер за подредба
-        const gridContainer = document.createElement('div');
-        gridContainer.className = 'subjects-grid';
-        subjectsDiv.appendChild(gridContainer);
-
-        // Дефинираме реда на категориите
-        const categoryOrder = {
-            'professional': 1,
-            'specific-professional': 2,
-            'advanced-professional': 3,
-            'general-professional': 4,
-            'practice': 5,
-            'general': 6
-        };
-
-        // Сортираме предметите само според категориите
-        const sortedSubjects = Object.entries(subjects).sort((a, b) => {
-            const categoryA = a[1].category;
-            const categoryB = b[1].category;
-            
-            // Сортиране само по категория
-            return categoryOrder[categoryA] - categoryOrder[categoryB];
-        });
-        
-        let delay = 0;
-        let pendingAnimations = 0;
-
-        for (const [subject, data] of sortedSubjects) {
-            const subjectElement = document.createElement('div');
-            subjectElement.className = 'subject';
-            subjectElement.style.opacity = '0';
-            subjectElement.style.transform = 'translateY(20px)';
-            subjectElement.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-            subjectElement.style.transitionDelay = `${delay}s`;
-            
-            const iconUrl = subjectIcons[subject] || 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/question-circle.svg';
-            const categoryName = getCategoryName(data.category);
-            
-            subjectElement.innerHTML = `
-                <span class="subject-category ${data.category}">${categoryName}</span>
-                <h3>
-                    <span class="subject-icon">
-                        <img src="${iconUrl}" alt="${subject}" class="icon-img" width="24" height="24">
-                    </span>
-                    ${subject}
-                </h3>
-                <p>${data.description}</p>
-            `;
-            
-            gridContainer.appendChild(subjectElement);
-            delay += 0.05; // Намаляваме времето за закъснение за да е по-бърза анимацията
-            
-            // Форсираме reflow за анимацията
-            subjectElement.offsetHeight;
-            
-            pendingAnimations++;
-            setTimeout(() => {
-                subjectElement.style.opacity = '1';
-                subjectElement.style.transform = 'translateY(0)';
-                pendingAnimations--;
-                
-                // Последна анимация приключи
-                if (pendingAnimations === 0) {
-                    isAnimating = false;
-                }
-            }, 50);
-        }
-        
-        // Показваме съдържанието с анимация
-        subjectsDiv.style.opacity = '1';
-        subjectsDiv.style.transform = 'translateY(0)';
-        
-        // Задаваме резервен таймер, който да освободи флага isAnimating, в случай че нещо се обърка
-        window.animationTimeout = setTimeout(() => {
-            isAnimating = false;
-        }, Math.max(500, delay * 1000 + 200));
-    }, 300);
-
-    // Активен бутон с плавна анимация
-    document.querySelectorAll('.buttons button').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.textContent.includes(grade.toString())) {
-            btn.classList.add('active');
-        }
-    });
-
-    currentGrade = grade;
+// Функция за чистене на стари таймаути
+function clearAllTimeouts() {
+  activeTimeouts.forEach(id => clearTimeout(id));
+  activeTimeouts = [];
 }
 
-// Добавяме клавиатурна навигация
-document.addEventListener('keydown', (e) => {
-    if (currentGrade && !isAnimating) {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
-            const nextGrade = Math.min(currentGrade + 1, 12);
-            if (nextGrade !== currentGrade) showGrade(nextGrade);
-        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
-            const prevGrade = Math.max(currentGrade - 1, 8);
-            if (prevGrade !== currentGrade) showGrade(prevGrade);
-        }
+function showGrade(grade) {
+  // Ако е същия клас – нищо не правим
+  if (currentGrade === grade) return;
+
+  // Спираме всички текущи анимации
+  clearAllTimeouts();
+
+  const gradeTitle = document.getElementById('grade-title');
+  const subjectsDiv = document.getElementById('subjects');
+
+  // Анимация за изчезване (много кратко, само за плавен преход)
+  subjectsDiv.style.opacity = '0';
+  subjectsDiv.style.transform = 'translateY(-20px)';
+  gradeTitle.classList.remove('animate');
+  void gradeTitle.offsetWidth;
+  gradeTitle.classList.add('animate');
+
+  // След 300ms обновяваме съдържанието
+  activeTimeouts.push(setTimeout(() => {
+    gradeTitle.textContent = `${grade} клас`;
+    subjectsDiv.innerHTML = '';
+
+    const subjects = curriculum[grade];
+    if (!subjects || Object.keys(subjects).length === 0) {
+      const emptyMessage = document.createElement('div');
+      emptyMessage.className = 'empty-message';
+      emptyMessage.textContent = 'Информацията за този клас скоро ще бъде добавена.';
+      subjectsDiv.appendChild(emptyMessage);
+      subjectsDiv.style.opacity = '1';
+      subjectsDiv.style.transform = 'translateY(0)';
+      currentGrade = grade;
+      return;
     }
-});
+
+    // Легенда
+    const legend = document.createElement('div');
+    legend.className = 'legend';
+    legend.innerHTML = `
+      <div class="legend-item"><div class="legend-color legend-professional"></div><span>Отраслова професионална подготовка</span></div>
+      <div class="legend-item"><div class="legend-color legend-specific-professional"></div><span>Специфична професионална подготовка</span></div>
+      <div class="legend-item"><div class="legend-color legend-advanced-professional"></div><span>Разширена професионална подготовка</span></div>
+      <div class="legend-item"><div class="legend-color legend-general-professional"></div><span>Обща професионална подготовка</span></div>
+      <div class="legend-item"><div class="legend-color legend-practise"></div><span>Производствена практика</span></div>
+      <div class="legend-item"><div class="legend-color legend-general"></div><span>Общообразователна подготовка</span></div>
+    `;
+    subjectsDiv.appendChild(legend);
+
+    // Grid контейнер
+    const gridContainer = document.createElement('div');
+    gridContainer.className = 'subjects-grid';
+    subjectsDiv.appendChild(gridContainer);
+
+    // Сортиране и анимация на предметите
+    const sortedSubjects = Object.entries(subjects);
+    let delay = 0;
+    for (const [subject, data] of sortedSubjects) {
+      const el = document.createElement('div');
+      el.className = 'subject';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+      el.style.transitionDelay = `${delay}s`;
+      el.innerHTML = `
+      <span class="subject-category ${data.category}">${getCategoryName(data.category)}</span>
+      <h3><span class="subject-icon"><img src="${subjectIcons[subject]||'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/question-circle.svg'}" alt="${subject}" width="24" height="24"></span>${subject}</h3>
+      <p>${formatHours(data.description)}</p>
+    `;
+    
+    // И добавете тази помощна функция:
+    function formatHours(description) {
+      if (!description) return '';
+      return description.replace(/(\d+)/g, '$1 часа');
+    }
+    
+      gridContainer.appendChild(el);
+      void el.offsetHeight;
+      activeTimeouts.push(setTimeout(() => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, delay * 1000 + 50));
+      delay += 0.1;
+    }
+
+    // Показваме съдържанието
+    activeTimeouts.push(setTimeout(() => {
+      subjectsDiv.style.opacity = '1';
+      subjectsDiv.style.transform = 'translateY(0)';
+      currentGrade = grade;
+    }, 50));
+  }, 300));
+
+  // Обновяваме активния бутон
+  document.querySelectorAll('.buttons button').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.includes(grade.toString()));
+  });
+}
+
+
 
 // Функция, която превръща кода на категорията в текст за показване
 function getCategoryName(category) {
@@ -579,14 +499,13 @@ document.head.appendChild(iconStyles);
     iconLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css';
     document.head.appendChild(iconLink);
     
+    // Добавяме клас за активен бутон при клик
     document.querySelectorAll('.buttons button').forEach(button => {
-        // Премахваме стария event listener, ако има такъв
-        button.onclick = null;
-        
-        // Добавяме нов event listener
         button.addEventListener('click', function() {
-            const grade = parseInt(this.textContent);
-            showGrade(grade);
+            if (!isAnimating) {
+                const grade = parseInt(this.textContent);
+                showGrade(grade);
+            }
         });
     });
 
