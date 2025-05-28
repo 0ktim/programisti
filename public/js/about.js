@@ -87,3 +87,69 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// FAQ функционалност
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Затваряме всички останали елементи
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Отваряме/затваряме текущия елемент
+            item.classList.toggle('active');
+            
+            // Добавяме анимация при отваряне
+            if (item.classList.contains('active')) {
+                const answer = item.querySelector('.faq-answer');
+                answer.style.opacity = '0';
+                setTimeout(() => {
+                    answer.style.opacity = '1';
+                }, 10);
+            }
+        });
+    });
+    
+    // Анимация за поява на FAQ елементите при скролване
+    const faqSection = document.querySelector('.faq-section');
+    const faqContainer = document.querySelector('.faq-container');
+    
+    const options = {
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let delay = 0;
+                const items = faqContainer.querySelectorAll('.faq-item');
+                items.forEach(item => {
+                    setTimeout(() => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 50);
+                    }, delay);
+                    delay += 150;
+                });
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+    
+    if (faqSection) {
+        observer.observe(faqSection);
+    }
+});
