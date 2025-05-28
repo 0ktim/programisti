@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебна програма за 8-12 клас в СУ Йордан Йовков - Сливен">
+    <title>Учебна програма - СУ "Йордан Йовков"</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/training-program.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/social.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/scrollBar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+        <!-- Контейнер за хедъра -->
+        <div id="header-container"></div>
+
+    <main class="container">
+        <h1>Учебна програма</h1>
+        <nav class="buttons" aria-label="Избор на клас">
+            <button onclick="showGrade(8)" aria-label="Покажи програма за 8 клас">8 клас</button>
+            <button onclick="showGrade(9)" aria-label="Покажи програма за 9 клас">9 клас</button>
+            <button onclick="showGrade(10)" aria-label="Покажи програма за 10 клас">10 клас</button>
+            <button onclick="showGrade(11)" aria-label="Покажи програма за 11 клас">11 клас</button>
+            <button onclick="showGrade(12)" aria-label="Покажи програма за 12 клас">12 клас</button>
+        </nav>
+        <section id="curriculum" class="curriculum-content" aria-live="polite">
+            <h2 id="grade-title">Изберете клас</h2>
+            <div id="subjects" class="subjects-grid"></div>
+        </section>
+    </main>
+
+        <!-- Контейнер за футъра -->
+        <div id="footer-container"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <!-- Добавяме скрипта за общите компоненти пръв -->
+        <script src="../js/common.js" defer></script>
+        <script src="../js/main.js" defer></script>
+    <script src="../js/training-program.js"></script>
+    <script>
+        // Добавяме анимация при зареждане на страницата
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.container').style.opacity = '0';
+            setTimeout(() => {
+                document.querySelector('.container').style.opacity = '1';
+                document.querySelector('.container').style.transition = 'opacity 0.5s ease';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 

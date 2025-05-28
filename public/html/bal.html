@@ -4,238 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СУ "Йордан Йовков" - Приложен програмист</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/bal.css">
     <link rel="stylesheet" href="../css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-
-
 </head>
 <body>
-    <header>
-        <img src="../images/logo.png" alt="СУ Йордан Йовков">
-        <div class="nav-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Контейнер за хедъра -->
+    <div id="header-container"></div>
+
+    <section id="calculator" class="calculator-section">
+        <div class="calculator-container">
+            <h2>🎓 Калкулатор за бал 🎓</h2>
+            <form id="balForm">
+                <div class="input-group">
+                    <label>🖋️ Точки от НВО по БЕЛ:</label>
+                    <input type="number" id="belPoints" min="0" max="100" required>
+                </div>
+                <div class="input-group">
+                    <label>📐Точки от НВО по Математика:</label>
+                    <input type="number" id="mathPoints" min="0" max="100" required>
+                </div>
+                <div class="input-group">
+                    <label>💻 Оценка по КМИТ:</label>
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select">
+                            <div class="custom-select-trigger">Изберете оценка</div>
+                            <div class="custom-options">
+                                <span class="custom-option" data-value="15">Среден (3)</span>
+                                <span class="custom-option" data-value="26">Добър (4)</span>
+                                <span class="custom-option" data-value="39">Много добър (5)</span>
+                                <span class="custom-option" data-value="50">Отличен (6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>🌍 Оценка по Чужд език (Английския език <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="Великобритания" style="width: 20px; vertical-align: middle; margin-right: 5px;">):
+
+                    </label>
+                    <div class="custom-select-wrapper">
+                        <div class="custom-select">
+                            <div class="custom-select-trigger">Изберете оценка</div>
+                            <div class="custom-options">
+                                <span class="custom-option" data-value="15">Среден (3)</span>
+                                <span class="custom-option" data-value="26">Добър (4)</span>
+                                <span class="custom-option" data-value="39">Много добър (5)</span>
+                                <span class="custom-option" data-value="50">Отличен (6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="calculateBal" class="calculate-btn">✨ Изчисли бал ✨</button>
+            </form>
+            <div id="result" class="result-box">Твоят бал е:</div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Начало</a></li>
-                <li><a href="about.html">За паралелката</a></li>
-                <li>
-                    <a href="#program">Обучение</a>
-                    <ul>
-                        <li><a href="#">Учебна програма</a></li>
-                        <li><a href="extracurricular.html">Извънкласни дейности</a></li>
-                    </ul>
-                </li>
-                <li><a href="projects.html">Проекти</a></li>
-                <li><a href="contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </header>
- 
-
-        <section id="calculator" class="calculator-section">
-            <div class="calculator-container">
-                <h2>🎓 Калкулатор за бал 🎓</h2>
-                <form id="balForm">
-                    <div class="input-group">
-                        <label>🖋️ Точки от НВО по БЕЛ:</label>
-                        <input type="number" id="belPoints" min="0" max="100" required>
-                    </div>
-                    <div class="input-group">
-                        <label>📐Точки от НВО по Математика:</label>
-                        <input type="number" id="mathPoints" min="0" max="100" required>
-                    </div>
-                    <div class="input-group">
-                        <label>💻 Оценка по Информационни технологии:</label>
-                        <div class="custom-select-wrapper">
-                            <div class="custom-select">
-                                <div class="custom-select-trigger">Изберете оценка</div>
-                                <div class="custom-options">
-                                    <span class="custom-option" data-value="15">Среден (3)</span>
-                                    <span class="custom-option" data-value="26">Добър (4)</span>
-                                    <span class="custom-option" data-value="39">Много добър (5)</span>
-                                    <span class="custom-option" data-value="50">Отличен (6)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label>🌍 Оценка по Чужд език (Английския език <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="Великобритания" style="width: 20px; vertical-align: middle; margin-right: 5px;">):
-
-                        </label>
-                        <div class="custom-select-wrapper">
-                            <div class="custom-select">
-                                <div class="custom-select-trigger">Изберете оценка</div>
-                                <div class="custom-options">
-                                    <span class="custom-option" data-value="15">Среден (3)</span>
-                                    <span class="custom-option" data-value="26">Добър (4)</span>
-                                    <span class="custom-option" data-value="39">Много добър (5)</span>
-                                    <span class="custom-option" data-value="50">Отличен (6)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" id="calculateBal" class="calculate-btn">✨ Изчисли бал ✨</button>
-                </form>
-                <div id="result" class="result-box">Твоят бал е:</div>
-            </div>
-        </section>
-
-    
-        <div class="calculator-explanation hidden">
-            <h3>Как се пресмята балът за специалността "Приложен програмист"?</h3>
-            <p>
-                Вашият бал се изчислява на базата на резултатите от Националното външно оценяване (НВО) и оценките от удостоверението за завършване на основно образование. Формулата за изчисляване на бала е следната:
-            </p>
-            <ul>
-                
-                <li>✔️ Точките от НВО по Български език и литература се умножават по 2.</li>
-                <li>✔️ Точките от НВО по Математика също се умножават по 2.</li>
-                <li>Към сбора се добавят оценките по:
-                    <ul>
-                        <li><strong>✔️ Информационни технологии:</strong> преобразувана в точки: 
-                            <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
-                        </li>
-                        <li><strong>✔️ Чужд език:</strong> преобразувана в точки: 
-                            <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <p>
-                Максималният бал, който можете да постигнете, е <strong>500 точки</strong>. 
-            </p>
-            <p>
-                Той се събира от 200 точки за НВО по Български език и литература, 200 точки за НВО по Математика и 100 точки от оценките по Информационни технологии и Чужд език.
-            </p>
-            <p>
-                Нашата професионална паралелка "Приложен програмист" е насочена към ученици, които искат да развият умения в програмирането, информационните технологии и чуждите езици. Състезателният бал помага да се подберат най-мотивираните кандидати за специалността.
-            </p>
-        </div>
-        
-        
-    
-    
-    
-    
+    </section>
 
 
-
-
-
-        <footer>
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="../images/logo.png" alt="СУ Йордан Йовков">
-                    </div>
-                    <p class="school-description"><b>СУ "Йордан Йовков" - Сливен</b> <br> От първия ред код до първата иновация – твоята история започва тук!</b></p>
-                </div>
+    <div class="calculator-explanation hidden">
+        <h3>Как се пресмята балът за специалността "Приложен програмист"?</h3>
+        <p>
+            Вашият бал се изчислява на базата на резултатите от Националното външно оценяване (НВО) и оценките от удостоверението за завършване на основно образование. Формулата за изчисляване на бала е следната:
+        </p>
+        <ul>
+            
+            <li>✔️ Точките от НВО по <strong>Български език и литература</strong> се умножават по 2.</li>
+            <li>✔️ Точките от НВО по <strong>Математика </strong> също се умножават по 2.</li>
+            <li>Към сбора се добавят оценките по:
+                <ul>
+                    <li><strong>✔️ Kомпютърно моделиране и информационни технологии:</strong> преобразувана в точки: 
+                        <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
+                    </li>
+                    <li><strong>✔️ Чужд език:</strong> преобразувана в точки: 
+                        <em>Среден (3) - 15 т., Добър (4) - 26 т., Много добър (5) - 39 т., Отличен (6) - 50 т.</em>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            Максималният бал, който можете да постигнете, е <strong>500 точки</strong>. 
+        </p>
+        <p>
+            Той се събира от 200 точки за НВО по Български език и литература, 200 точки за НВО по Математика и 100 точки от оценките по Информационни технологии и Чужд език.
+        </p>
+        <p>
+            Нашата професионална паралелка "Приложен програмист" е насочена към ученици, които искат да развият умения в програмирането, информационните технологии и чуждите езици. Състезателният бал помага да се подберат най-мотивираните кандидати за специалността.
+        </p>
+    </div>
     
-                <div class="footer-section">
-                    <h4>Полезни връзки</h4>
-                    <ul class="footer-links-list">
-                        <li><a href="../index.html">Начало</a></li>
-                        <li><a href="..//html/about.html">За паралелката</a></li>
-                        <li><a href="">Учебна програма</a></li>
-                        <li><a href="../html/extracurricular.html">Извънкласни дейности</a>
-                        <li><a href="../html/projects.html">Проекти</a>
-                        <li><a href="../html/bal.html">Калкулатор за бал</a></li>
-                        <li><a href="">Често задавани въпроси</a></li>
-                        <li><a href="../html/contact.html">Контакти</a></li>
-                    </ul>
-                </div>
-    
-                <div class="footer-section">
-                    <h4>Контакти</h4>
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <p>Телефони:</p>
-                                <a href="tel:+35944667244" class="contact-link">Директор: 044/ 66 72 44</a>
-                                <a href="tel:+35944667684" class="contact-link">Зам. директор: 044/ 66 76 84</a>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <p>Работно време:</p>
-                                <p>8:00 - 17:00</p>
-                                <small>Понеделник - Петък</small>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <a href="https://maps.google.com/?q=СУ+Йордан+Йовков+Сливен" target="_blank" class="contact-link">
-                                    <p>Адрес:</p>
-                                    <p>ж.к. Българка</p>
-                                    <p>8800 Сливен</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <a href="mailto:info-2000114@edu.mon.bg" class="contact-link">info-2000114@edu.mon.bg</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="footer-section social-section">
-                    <h4>Последвайте ни</h4>
-                    <div class="social-links" style="display: flex;">
-                        <a href="https://www.facebook.com/SUYordanYovkov" class="social-icon facebook" aria-label="Facebook" target="_blank" rel="noopener">
-                            <div class="icon-wrapper">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <span class="social-label">Facebook</span>
-                        </a>
-                        <a href="https://www.tiktok.com/@x_su_sliven" class="social-icon tiktok" aria-label="TikTok" target="_blank" rel="noopener">
-                            <div class="icon-wrapper">
-                                <i class="fab fa-tiktok"></i>
-                            </div>
-                            <span class="social-label">TikTok</span>
-                        </a>
-                        <a href="https://www.youtube.com/@%D0%A1%D0%A3%D0%99%D0%BE%D1%80%D0%B4%D0%B0%D0%BD%D0%99%D0%BE%D0%B2%D0%BA%D0%BE%D0%B2" class="social-icon youtube" aria-label="YouTube" target="_blank" rel="noopener">
-                            <div class="icon-wrapper">
-                                <i class="fab fa-youtube"></i>
-                            </div>
-                            <span class="social-label">YouTube</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="footer-bottom">
-                <div class="footer-legal">
-                    <nav class="legal-links">
-                        <a href="../html/privacy-policy.html">
-                            <i class="fas fa-shield-alt"></i>
-                            Политика за поверителност
-                        </a>
-                        <span class="separator">•</span>
-                        <a href="../html/terms.html">
-                            <i class="fas fa-gavel"></i>
-                            Условия за ползване
-                        </a>
-                    </nav>
-                    <div class="copyright">
-                        <i class="far fa-copyright"></i>
-                        <span>2025 СУ "Йордан Йовков" – Сливен. Всички права запазени.</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
+    <!-- Контейнер за футъра -->
+    <div id="footer-container"></div>
+
+    <!-- Добавяме скрипта за общите компоненти пръв -->
+    <script src="../js/common.js" defer></script>
     <script src="../js/main.js" defer></script>
+    <script src="../js/effects.js" defer></script>
+    <script src="../js/bal.js" defer></script>
 
     <script>
 
@@ -316,8 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach(el => observer.observe(el));
 });
-
-
 
     </script>
 </body>
