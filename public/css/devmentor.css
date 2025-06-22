@@ -39,12 +39,12 @@ body {
 }
 
 /* Enhanced Header */
-header {
+devheader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3e54b6 0%, #503886 100%);
     background-size: 400% 400%;
     animation: gradientMove 15s ease infinite;
     color: white;

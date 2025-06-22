@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
 <title>DevMentor – Менторска програма по програмиране</title>
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/devmentor.css">
 <link rel="stylesheet" href="../css/scrollBar.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../css/social.css">
+
+
 </head>
 
 <body>
-    <header>
+        <!-- Контейнер за хедъра -->
+        <div id="header-container"></div>
+
+    <devheader>
         <div class="particles-container">
             <div class="particle"></div>
             <div class="particle"></div>
@@ -23,11 +30,11 @@
         
         <div class="header-text">
             <h1 class="title">DevMentor – Менторска програма по програмиране</h1>
-            <p class="subtitle">Учи с приятел. Подкрепяй. Израствай.</p>
+            <p class="subtitle">Учи с приятели. Подкрепяй. Израствай.</p>
             <div class="header-stats">
                 <div class="stat-item">
                     <i class="fas fa-users"></i>
-                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-number" data-target="14">0</span>
                     <span class="stat-label">Участници</span>
                 </div>
                 <div class="stat-item">
@@ -37,7 +44,7 @@
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-star"></i>
-                    <span class="stat-number" data-target="90">0</span>
+                    <span class="stat-number" data-target="100">0</span>
                     <span class="stat-label">% Успех</span>
                 </div>
             </div>
@@ -45,7 +52,7 @@
         <div class="logo-container">
             <img src="../images/devmentor.png" alt="DevMentor Logo" class="logo">
         </div>
-    </header>
+    </devheader>
 
     <div class="page-container">
         <section class="hero-section">
@@ -154,11 +161,11 @@
         </div>
 
         <section class="target-audience">
-            <h2>👥 За кого е предназначена</h2>
+            <h2> За кого е предназначена</h2>
             <div class="audience-cards">
                 <div class="audience-card mentor-card" data-aos="zoom-in">
                     <div class="card-header">
-                        <h3>🧑‍🏫 Ментори</h3>
+                        <h3>🧑 Ментори</h3>
                     </div>
                     <p>Ученици от 10. и 11. клас, които с желание споделят знания, опит и вдъхновяват останалите.</p>
                     <div class="card-features">
@@ -284,7 +291,7 @@
 
         <section id="join" class="contact">
             <h2>📩 Искаш да се включиш?</h2>
-            <p>Свържи се с учителя по професионална подготовка или попитай в клуба <strong>„Генерация AI"</strong>. Всеки, който има желание да учи и споделя знания, е добре дошъл!</p>
+            <p>Свържи се с учител по професионална подготовка, попитай в клубa <strong>„Arduino"</strong> или клуба <strong>„Генерация AI"</strong>. Всеки, който има желание да учи и споделя знания, е добре дошъл!</p>
             
             <div class="contact-actions">
                 <a href="contact.html" class="contact-btn primary">
@@ -295,6 +302,16 @@
         </section>
     </div>
 
+    <!-- Контейнер за футъра -->
+    <div id="footer-container"></div>
+
+    <!-- Добавяме скрипта за общите компоненти пръв -->
+    <script src="../js/common.js" defer></script>
     <script src="../js/devmentor.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/effects.js" defer></script>
+    <script src="../js/extracurricularActivities.js" defer></script>
+
+
 </body>
 </html>
