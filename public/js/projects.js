@@ -3,4 +3,5 @@ document.querySelectorAll('.view-details').forEach(button => {
         e.stopPropagation();
         const projectTitle = e.target.parentElement.querySelector('.project-title').textContent;
         alert(`Проект: ${projectTitle}\nСкоро ще добавим повече детайли!`);
+    });
 });
