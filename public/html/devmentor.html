@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+<title>DevMentor – Менторска програма по програмиране</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/devmentor.css">
+<link rel="stylesheet" href="../css/scrollBar.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../css/social.css">
+
+
+</head>
+
+<body>
+        <!-- Контейнер за хедъра -->
+        <div id="header-container"></div>
+
+    <devheader>
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="header-text">
+            <h1 class="title">DevMentor – Менторска програма по програмиране</h1>
+            <p class="subtitle">Учи с приятели. Подкрепяй. Израствай.</p>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number" data-target="14">0</span>
+                    <span class="stat-label">Участници</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-code"></i>
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label">Проекта</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">% Успех</span>
+                </div>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="../images/devmentor.png" alt="DevMentor Logo" class="logo">
+        </div>
+    </devheader>
+
+    <div class="page-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Какво е DevMentor?</h2>
+                <p><strong>DevMentor</strong> е вътрешноучилищна менторска програма в СУ „Йордан Йовков" – Сливен, създадена в рамките на специалността „Интелигентни системи". В нея ученици от по-горните класове помагат на по-младите си съученици да развият знания и умения в програмирането чрез съвместна работа, обучение и практика.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('goals')">
+                        <i class="fas fa-target"></i>
+                        Нашите цели
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('join')">
+                        <i class="fas fa-user-plus"></i>
+                        Присъедини се
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <section id="goals" class="goals-section">
+            <h2>Цели на програмата</h2>
+            <div class="goals-grid">
+                <div class="goal-card" data-aos="fade-up">
+                    <div class="goal-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Самоподготовка</h3>
+                    <p>Подпомагане на самостоятелното обучение и развитие</p>
+                </div>
+                
+                <div class="goal-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="goal-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Екипна работа</h3>
+                    <p>Развитие на комуникация и сътрудничество</p>
+                </div>
+                
+                <div class="goal-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="goal-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Затвърждаване</h3>
+                    <p>Подобряване на знанията чрез преподаване</p>
+                </div>
+                
+                <div class="goal-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="goal-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Инициативност</h3>
+                    <p>Насърчаване на отговорност и креативност</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <section class="how-it-works">
+            <h2>Как работи DevMentor?</h2>
+            <p style="margin-bottom: 1.2rem; text-align: center;">Менторската програма се провежда в рамките на учебната година чрез:</p>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Седмични срещи</h3>
+                        <p>Обсъждане на конкретни теми и практически предизвикателства</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Практически задачи</h3>
+                        <p>Участие в реални проекти и работа в екип</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Малки групи</h3>
+                        <p>Индивидуално внимание и подкрепа от преподавател</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <section class="target-audience">
+            <h2>За кого е предназначена?</h2>
+            <div class="audience-cards">
+                <div class="audience-card mentor-card" data-aos="zoom-in">
+                    <div class="card-header">
+                        <h3>Ментори</h3>
+                    </div>
+                    <p>Ученици от 10., 11. и 12. клас, които с желание споделят знания, опит и вдъхновяват останалите.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Опит</span>
+                        <span class="feature-tag">Знания</span>
+                        <span class="feature-tag">Лидерство</span>
+                    </div>
+                </div>
+                
+                <div class="audience-card participant-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-header">
+                        <h3>Участници</h3>
+                    </div>
+                    <p>Ученици от 8. и 9. клас, които търсят подкрепа, напътствия и възможност да се развиват допълнително.</p>
+                    <div class="card-features">
+                        <span class="feature-tag">Мотивация</span>
+                        <span class="feature-tag">Любопитство</span>
+                        <span class="feature-tag">Развитие</span>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; text-align: center; font-weight: 600;">✅ Включването е доброволно и се координира от учителите по професионална подготовка</p>
+        </section>
+    
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div>
+
+        <section class="benefits-section">
+            <h2>Ползи от участието</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up">
+                    <i class="fas fa-crown"></i>
+                    <h3>Лидерски умения</h3>
+                    <p>Развиване на способности за ръководство и мотивация</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-comments"></i>
+                    <h3>Комуникация</h3>
+                    <p>Подобрени презентационни и комуникационни способности</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-brain"></i>
+                    <h3>Разбиране</h3>
+                    <p>По-добро разбиране на материала чрез преподаване</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Състезания</h3>
+                    <p>Участие в клубове, събития и състезания</p>
+                </div>
+                
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Признание</h3>
+                    <p>Признание с грамоти и препоръки</p>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Професионално ориентиране</h3>
+                    <p>Изграждане на реална представа за работата в ИТ сектора</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div>
+    
+        <!-- <section class="gallery">
+            <h2>📸 Галерия</h2>
+            <div class="slideshow-container">
+                <div class="slide active" style="display: flex;">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="slide-text">Ученици работят заедно по програмиране</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="slide-text">Ментори помагат на по-младите ученици</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="slide-text">Работа по проекти в клуб "Генерация AI"</div>
+                    </div>
+                </div>
+                
+                <button class="slide-btn prev" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-btn next" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="slide-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+    
+        <div class="section-divider">
+            <div class="divider-glow"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <section id="join" class="contact">
+            <h2>Искаш да се включиш?</h2>
+            <p>Свържи се с учител по професионална подготовка, попитай в клубa <strong>Кадър 24"</strong> или клуба <strong>„Генерация AI"</strong>. Всеки, който има желание да учи и споделя знания, е добре дошъл!</p>
+            
+            <div class="contact-actions">
+                <a href="contact.html" class="contact-btn primary">
+                    <i class="fas fa-envelope"></i>
+                    Свържи се с нас
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Контейнер за футъра -->
+    <div id="footer-container"></div>
+
+    <!-- Добавяме скрипта за общите компоненти пръв -->
+    <script src="../js/common.js" defer></script>
+    <script src="../js/devmentor.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/effects.js" defer></script>
+    <script src="../js/extracurricularActivities.js" defer></script>
+
+
+</body>
+</html>
